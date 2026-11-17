@@ -1,0 +1,909 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>安安老师记bilibili-课堂片段与复盘笔记</title>
+<meta name="description" content="安安老师记bilibili 聚焦课堂实录、板书复盘与学习笔记整理，收录 2026 年 10 月至 11 月的公开视频片段、笔记模板与提问回复，帮学生按节奏跟课与自查。">
+<meta name="keywords" content="安安老师记bilibili">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f5d50'/%3E%3Cpath d='M18 44V20h8v9h12v-9h8v24h-8v-9H26v9z' fill='%23f4e9d8'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#20261f;
+  --ink-soft:#4a544a;
+  --paper:#f7f3ea;
+  --card:#fffdf8;
+  --green:#2f5d50;
+  --green-deep:#22443b;
+  --amber:#c8842c;
+  --amber-soft:#f1dfc2;
+  --line:#ddd5c4;
+  --line-strong:#c9bfa9;
+  --shadow:0 2px 0 rgba(34,68,59,.08),0 10px 24px -18px rgba(34,68,59,.5);
+  --radius:14px;
+  --radius-sm:9px;
+  --fs-h1:clamp(1.9rem,3.4vw,2.9rem);
+  --fs-h2:clamp(1.3rem,2vw,1.6rem);
+  --fs-h3:1.06rem;
+  --fs-body:1rem;
+  --fs-sm:.86rem;
+  --gap:clamp(14px,2vw,22px);
+  --stick-h:calc(34px + 66px);
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--stick-h) + 12px)}
+body{
+  margin:0;font-family:var(--font);background:var(--paper);color:var(--ink);
+  font-size:var(--fs-body);line-height:1.75;-webkit-text-size-adjust:100%;
+}
+img{max-width:100%;display:block}
+a{color:var(--green-deep)}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{
+  outline:3px solid var(--amber);outline-offset:2px;border-radius:4px
+}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+.sticky-stack{position:sticky;top:0;z-index:60}
+
+/* 公告条 */
+.notice{
+  background:var(--green-deep);color:#f3efe2;font-size:var(--fs-sm);
+  min-height:34px;display:flex;align-items:center
+}
+.notice .wrap{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding-block:5px}
+.notice b{color:var(--amber-soft);font-weight:600;letter-spacing:.02em}
+.notice .dot{width:7px;height:7px;border-radius:50%;background:var(--amber);flex:none}
+.notice a{color:#f3efe2;text-decoration:underline;text-underline-offset:3px}
+
+/* 页头 */
+.site-head{background:rgba(247,243,234,.96);border-bottom:1px solid var(--line-strong);backdrop-filter:blur(6px)}
+.head-row{display:flex;align-items:center;gap:16px;padding-block:11px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);flex:none}
+.brand-mark{width:38px;height:38px;flex:none}
+.brand-text{display:flex;flex-direction:column;line-height:1.15}
+.brand-text .logo-word{font-size:1.02rem;font-weight:700;letter-spacing:.02em}
+.brand-text small{font-size:.7rem;color:var(--ink-soft);letter-spacing:.16em}
+.nav-toggle{
+  display:none;margin-left:auto;background:var(--card);border:1px solid var(--line-strong);
+  color:var(--ink);font:inherit;font-size:.85rem;padding:7px 13px;border-radius:var(--radius-sm);cursor:pointer
+}
+.main-nav{margin-left:auto}
+.main-nav ul{display:flex;flex-wrap:wrap;gap:4px 6px;list-style:none;margin:0;padding:0}
+.main-nav a{
+  display:inline-block;padding:6px 10px;border-radius:var(--radius-sm);color:var(--ink-soft);
+  text-decoration:none;font-size:.9rem;border:1px solid transparent
+}
+.main-nav a:hover{background:var(--amber-soft);color:var(--green-deep);transform:translateY(-2px)}
+.main-nav a{transition:transform .18s ease,background .18s ease}
+.head-tools{display:flex;align-items:center;gap:8px;flex:none}
+.search-form{display:flex;align-items:center;gap:6px}
+.search-form input{
+  width:150px;font:inherit;font-size:.85rem;padding:6px 10px;border-radius:var(--radius-sm);
+  border:1px solid var(--line-strong);background:var(--card);color:var(--ink)
+}
+.search-form button,.btn{
+  font:inherit;font-size:.85rem;padding:7px 13px;border-radius:var(--radius-sm);
+  border:1px solid var(--green);background:var(--green);color:#fbf8f0;cursor:pointer
+}
+.search-form button:hover,.btn:hover{background:var(--green-deep)}
+.btn-ghost{background:transparent;color:var(--green-deep)}
+.btn-ghost:hover{background:var(--amber-soft);color:var(--green-deep)}
+.search-msg{font-size:.82rem;color:var(--amber);width:100%;padding-bottom:6px}
+
+/* 首屏 */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero-bg{position:absolute;inset:0;pointer-events:none}
+.hero-inner{position:relative;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:var(--gap);padding-block:clamp(28px,4.5vw,54px);align-items:center}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;letter-spacing:.12em;color:var(--green);background:#e6eee7;border:1px solid #cddcd0;padding:4px 11px;border-radius:999px}
+h1{font-size:var(--fs-h1);line-height:1.25;margin:14px 0 12px;letter-spacing:.01em;font-weight:800}
+.hero p.lead{margin:0 0 18px;color:var(--ink-soft);max-width:36em}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}
+.hero-facts{display:flex;flex-wrap:wrap;gap:10px 26px;list-style:none;margin:0;padding:0;font-size:.85rem;color:var(--ink-soft)}
+.hero-facts strong{display:block;color:var(--green-deep);font-size:1.28rem;line-height:1.2}
+.hero-visual{position:relative;min-height:260px;display:flex;align-items:center;justify-content:center}
+.hero-visual svg{width:100%;height:auto;max-width:420px}
+
+/* 布局 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 292px;gap:clamp(20px,3vw,34px);padding-block:clamp(24px,3.5vw,42px)}
+main{min-width:0}
+section.block{margin-bottom:clamp(26px,3.6vw,44px);scroll-margin-top:calc(var(--stick-h) + 12px)}
+.block-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--line-strong);padding-bottom:8px;margin-bottom:16px}
+.block-head h2{font-size:var(--fs-h2);margin:0;letter-spacing:.01em}
+.block-head .tag{font-size:.75rem;color:var(--green);background:#e6eee7;border-radius:999px;padding:2px 10px;border:1px solid #cddcd0}
+.sec-note{font-size:var(--fs-sm);color:var(--ink-soft);margin:-6px 0 14px}
+
+/* 卡片与列表 */
+.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--gap)}
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
+.card h3{margin:0 0 8px;font-size:var(--fs-h3);line-height:1.45}
+.card p{margin:0 0 10px;font-size:.94rem;color:var(--ink-soft)}
+.meta{font-size:.78rem;color:var(--ink-soft);display:flex;flex-wrap:wrap;gap:6px 12px;margin-bottom:8px}
+.meta span::before{content:"·";margin-right:6px;color:var(--line-strong)}
+.meta span:first-child::before{content:none}
+.thumb{border-radius:var(--radius-sm);overflow:hidden;margin-bottom:10px;border:1px solid var(--line)}
+.thumb img{width:100%;height:150px;object-fit:cover}
+.list-compact{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.list-compact li{border-bottom:1px solid var(--line);padding:11px 2px;display:grid;grid-template-columns:78px minmax(0,1fr);gap:12px;align-items:baseline}
+.list-compact time{font-size:.78rem;color:var(--amber);font-variant-numeric:tabular-nums}
+.list-compact a{text-decoration:none;color:var(--ink);font-size:.94rem}
+.list-compact a:hover{color:var(--green-deep);text-decoration:underline}
+.list-compact .who{display:block;font-size:.78rem;color:var(--ink-soft);margin-top:2px}
+
+/* 频道索引 */
+.channels{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;list-style:none;margin:0;padding:0}
+.channels a{
+  display:block;text-decoration:none;background:var(--card);border:1px solid var(--line);
+  border-radius:var(--radius-sm);padding:10px 12px;color:var(--ink);font-size:.9rem;
+  transition:transform .18s ease,background .18s ease
+}
+.channels a small{display:block;color:var(--ink-soft);font-size:.74rem;margin-top:3px}
+.channels a:hover{transform:translateY(-3px);background:#fff;border-color:var(--line-strong)}
+
+/* 深度解析 */
+article.deep{background:var(--card);border:1px solid var(--line-strong);border-radius:var(--radius);padding:clamp(16px,2.4vw,26px);box-shadow:var(--shadow)}
+article.deep h2{margin-top:0}
+article.deep h3{font-size:var(--fs-h3);margin:22px 0 8px;padding-left:10px;border-left:3px solid var(--amber)}
+article.deep p{margin:0 0 12px}
+article.deep p:first-of-type{font-size:1.02rem}
+.pull{background:#f2efe2;border-left:3px solid var(--green);padding:12px 14px;border-radius:0 var(--radius-sm) var(--radius-sm) 0;margin:0 0 14px;font-size:.95rem}
+.verdict{font-weight:700;color:var(--green-deep)}
+table.cmp{width:100%;border-collapse:collapse;font-size:.86rem;margin:6px 0 16px;background:#fffdf8}
+table.cmp caption{text-align:left;font-size:.8rem;color:var(--ink-soft);padding-bottom:6px}
+table.cmp th,table.cmp td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+table.cmp th{background:#eae6d8;font-weight:600}
+.scroll-x{overflow-x:auto}
+
+/* 步骤 */
+.steps{list-style:none;counter-reset:s;margin:0;padding:0;display:grid;gap:12px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius-sm);padding:12px}
+.steps li::before{
+  content:counter(s);width:30px;height:30px;border-radius:50%;background:var(--green);color:#fbf8f0;
+  display:grid;place-items:center;font-size:.86rem;font-weight:700
+}
+.steps h3{margin:0 0 4px;font-size:.98rem}
+.steps p{margin:0;font-size:.9rem;color:var(--ink-soft)}
+
+/* FAQ */
+details.faq{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-sm);padding:0 14px;margin-bottom:9px}
+details.faq summary{cursor:pointer;padding:12px 0;font-weight:600;font-size:.95rem;list-style:none;display:flex;gap:10px;align-items:flex-start}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::before{content:"+";color:var(--amber);font-weight:700;flex:none;width:14px}
+details.faq[open] summary::before{content:"−"}
+details.faq .ans{padding:0 0 13px 24px;font-size:.92rem;color:var(--ink-soft)}
+details.faq[open]{border-color:var(--line-strong)}
+
+/* 评论 */
+.comments{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--gap)}
+.cmt{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-sm);padding:13px 14px;font-size:.9rem}
+.cmt .who{display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--ink-soft);margin-bottom:6px}
+.avatar{width:26px;height:26px;border-radius:50%;background:var(--amber-soft);color:var(--green-deep);display:grid;place-items:center;font-size:.76rem;font-weight:700;flex:none}
+.cmt p{margin:0}
+.cmt.tone-warn{border-left:3px solid var(--amber)}
+.cmt.tone-neutral{border-left:3px solid var(--line-strong)}
+
+/* 标签 */
+.tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.tags a,.tags span{
+  display:inline-block;font-size:.83rem;padding:5px 11px;border-radius:999px;
+  background:#fffdf8;border:1px solid var(--line-strong);color:var(--green-deep);text-decoration:none
+}
+.tags a:hover{background:var(--amber-soft)}
+
+/* 时间线 */
+.timeline{list-style:none;margin:0;padding:0 0 0 18px;border-left:2px solid var(--line-strong)}
+.timeline li{position:relative;padding:0 0 16px 14px}
+.timeline li::before{content:"";position:absolute;left:-23px;top:6px;width:10px;height:10px;border-radius:50%;background:var(--card);border:2px solid var(--green)}
+.timeline time{font-size:.78rem;color:var(--amber);font-weight:600}
+.timeline p{margin:2px 0 0;font-size:.9rem;color:var(--ink-soft)}
+
+/* 榜单 */
+.rank{list-style:none;margin:0;padding:0;counter-reset:r;display:grid;gap:8px}
+.rank li{counter-increment:r;display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:10px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:var(--radius-sm);padding:9px 12px;font-size:.92rem}
+.rank li::before{content:counter(r);font-weight:800;color:var(--amber);font-size:1rem}
+.rank .num{font-size:.78rem;color:var(--ink-soft)}
+
+/* 侧栏 */
+aside.side{min-width:0}
+.side-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px;margin-bottom:var(--gap);box-shadow:var(--shadow)}
+.side-card h2{font-size:.98rem;margin:0 0 10px;letter-spacing:.02em}
+.side-nav ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.side-nav a{display:block;font-size:.88rem;padding:6px 9px;border-radius:7px;color:var(--ink-soft);text-decoration:none;border-left:2px solid transparent}
+.side-nav a:hover{background:#f2efe2;color:var(--green-deep)}
+.side-nav a.active{background:#e6eee7;color:var(--green-deep);border-left-color:var(--green);font-weight:600}
+.side-list{list-style:none;margin:0;padding:0;font-size:.88rem}
+.side-list li{padding:7px 0;border-bottom:1px dashed var(--line);display:flex;justify-content:space-between;gap:10px}
+.side-list li:last-child{border-bottom:0}
+.side-list a{text-decoration:none;color:var(--ink)}
+.side-list a:hover{color:var(--green-deep);text-decoration:underline}
+.side-list .n{color:var(--ink-soft);font-size:.78rem;flex:none}
+.quote-side{font-size:.88rem;color:var(--ink-soft);margin:0}
+.tip{font-size:.78rem;color:var(--ink-soft);margin:8px 0 0;line-height:1.6}
+
+/* 页尾 */
+.site-foot{background:var(--green-deep);color:#e8e4d6;margin-top:10px;padding-block:clamp(26px,3.6vw,42px) 18px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:var(--gap)}
+.site-foot h2{font-size:.92rem;color:var(--amber-soft);margin:0 0 10px;letter-spacing:.04em}
+.site-foot p{font-size:.86rem;line-height:1.75;margin:0 0 10px;color:#cfd9cc}
+.site-foot ul{list-style:none;margin:0;padding:0;font-size:.86rem}
+.site-foot li{margin-bottom:6px}
+.site-foot a{color:#e8e4d6;text-decoration:none}
+.site-foot a:hover{color:#fff;text-decoration:underline}
+.foot-brand{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.foot-brand svg{width:34px;height:34px;flex:none}
+.foot-brand strong{font-size:1rem}
+.foot-bottom{border-top:1px solid rgba(232,228,214,.24);margin-top:20px;padding-top:12px;font-size:.78rem;color:#b9c6b6;display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:space-between}
+
+/* 回顶 */
+.to-top{
+  position:fixed;right:16px;bottom:18px;z-index:70;background:var(--green);color:#fbf8f0;border:1px solid var(--green-deep);
+  border-radius:999px;padding:9px 15px;font:inherit;font-size:.82rem;cursor:pointer;opacity:0;visibility:hidden;
+  transition:opacity .2s ease,transform .2s ease;box-shadow:0 6px 18px -8px rgba(34,68,59,.8)
+}
+.to-top.show{opacity:1;visibility:visible}
+.to-top:hover{transform:translateY(-3px)}
+
+@media (max-width:960px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  aside.side{order:2}
+  main{order:1}
+  .hero-inner{grid-template-columns:minmax(0,1fr)}
+  .hero-visual{order:-1;min-height:0;margin-bottom:6px}
+  .hero-visual svg{max-width:340px}
+  .grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  .nav-toggle{display:inline-block}
+  .main-nav{
+    display:none;width:100%;order:5;margin-left:0;padding-bottom:8px
+  }
+  .main-nav.open{display:block}
+  .main-nav ul{flex-direction:column;gap:2px}
+  .main-nav a{border:1px solid var(--line);background:var(--card)}
+  .head-row{flex-wrap:wrap;row-gap:8px}
+  .head-tools{margin-left:auto}
+  .search-form input{width:118px}
+  .grid-2,.grid-3,.comments{grid-template-columns:minmax(0,1fr)}
+  .list-compact li{grid-template-columns:66px minmax(0,1fr)}
+  .hero-facts strong{font-size:1.15rem}
+}
+@media (max-width:420px){
+  .wrap{width:min(1180px,100% - 22px)}
+  .head-tools .search-form input{width:96px}
+  .channels{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .to-top{right:10px;bottom:12px;padding:8px 12px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .main-nav a:hover,.channels a:hover,.to-top:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-stack">
+  <div class="notice" role="note" aria-label="更新公告">
+    <div class="wrap">
+      <span class="dot" aria-hidden="true"></span>
+      <b>安安老师记bilibili 更新</b>
+      <span>11 月 7 日 20:10 上传《二次函数顶点式 12 题》第 3 讲；11 月 6 日笔记模板 v2.3 补入错题栏。</span>
+      <a href="/#latest">查看更新条目</a>
+    </div>
+  </div>
+
+  <header class="site-head">
+    <div class="wrap head-row">
+      <a class="brand" href="/#top" aria-label="返回首页顶部">
+        <svg class="brand-mark" viewBox="0 0 64 64" role="img" aria-label="安安老师记bilibili 图形标志">
+          <rect width="64" height="64" rx="14" fill="#2f5d50"/>
+          <path d="M18 44V20h8v9h12v-9h8v24h-8v-9H26v9z" fill="#f4e9d8"/>
+          <circle cx="49" cy="15" r="5" fill="#c8842c"/>
+        </svg>
+        <span class="brand-text">
+          <span class="logo-word">安安老师记bilibili</span>
+          <small>课堂实录 · 板书复盘</small>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mainNav">菜单</button>
+      <nav class="main-nav" id="mainNav" aria-label="主题导航">
+        <ul>
+          <li><a href="/#overview">领域概览</a></li>
+          <li><a href="/#picks">精选内容</a></li>
+          <li><a href="/#latest">最新更新</a></li>
+          <li><a href="/#channels">频道分类</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">跟课指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#comments">同学评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#rec">相关推荐</a></li>
+        </ul>
+      </nav>
+      <div class="head-tools">
+        <form class="search-form" id="searchForm" role="search" aria-label="站内查找">
+          <label for="q" class="visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">查找板块</label>
+          <input id="q" name="q" type="search" placeholder="找板块或条目" autocomplete="off">
+          <button type="submit">查找</button>
+        </form>
+      </div>
+      <p class="search-msg" id="searchMsg" role="status" hidden></p>
+    </div>
+  </header>
+</div>
+
+<div id="top"></div>
+
+<section class="hero" aria-labelledby="heroTitle">
+  <svg class="hero-bg" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+    <defs>
+      <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
+        <path d="M34 0H0V34" fill="none" stroke="#e0dccd" stroke-width="1"/>
+      </pattern>
+      <linearGradient id="fade" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#f2ede1"/><stop offset="1" stop-color="#f7f3ea"/>
+      </linearGradient>
+    </defs>
+    <rect width="1200" height="420" fill="url(#fade)"/>
+    <rect width="1200" height="420" fill="url(#grid)" opacity=".7"/>
+    <circle cx="1020" cy="90" r="120" fill="#e6eee7"/>
+    <circle cx="120" cy="360" r="96" fill="#f1dfc2" opacity=".6"/>
+  </svg>
+  <div class="wrap hero-inner">
+    <div>
+      <span class="kicker">初中数学 · 课堂切片与复盘</span>
+      <h1 id="heroTitle">安安老师记bilibili</h1>
+      <p class="lead">把一节课拆成可暂停的 6 分钟片段、可抄写的板书骨架和可自查的错题清单。每段视频附本讲原始题目编号、易错点时间戳，以及下一次课的衔接说明。</p>
+      <div class="hero-actions">
+        <a class="btn" href="/#latest">看本周更新</a>
+        <a class="btn btn-ghost" href="/#guide">按步骤跟课</a>
+      </div>
+      <ul class="hero-facts">
+        <li><strong>126</strong>讲课堂实录</li>
+        <li><strong>9</strong>个内容频道</li>
+        <li><strong>11-07</strong>最近一次上传</li>
+        <li><strong>v2.3</strong>笔记模板版本</li>
+      </ul>
+    </div>
+    <div class="hero-visual">
+      <svg viewBox="0 0 360 300" role="img" aria-label="板书与播放进度条组合示意">
+        <rect x="18" y="26" width="324" height="200" rx="12" fill="#22443b"/>
+        <rect x="34" y="44" width="292" height="164" rx="6" fill="#2f5d50"/>
+        <path d="M60 78h96M60 98h140M60 118h112M60 138h74" stroke="#e8e4d6" stroke-width="5" stroke-linecap="round" opacity=".85"/>
+        <path d="M196 96l30 22-30 22z" fill="#c8842c"/>
+        <circle cx="240" cy="166" r="24" fill="none" stroke="#f1dfc2" stroke-width="4"/>
+        <path d="M240 152v18l12 7" stroke="#f1dfc2" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <rect x="46" y="196" width="268" height="8" rx="4" fill="#1b372f"/>
+        <rect x="46" y="196" width="150" height="8" rx="4" fill="#c8842c"/>
+        <circle cx="196" cy="200" r="7" fill="#f4e9d8"/>
+        <rect x="44" y="240" width="120" height="30" rx="8" fill="#fffdf8" stroke="#c9bfa9"/>
+        <rect x="176" y="240" width="96" height="30" rx="8" fill="#fffdf8" stroke="#c9bfa9"/>
+        <rect x="284" y="240" width="58" height="30" rx="8" fill="#f1dfc2" stroke="#c9bfa9"/>
+        <path d="M58 258h56M190 258h44" stroke="#8a9a8c" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="wrap layout">
+  <main>
+
+    <section class="block" id="overview" aria-labelledby="h-overview">
+      <div class="block-head">
+        <h2 id="h-overview">领域概览：一节数学课被切成什么</h2>
+        <span class="tag">频道定位</span>
+      </div>
+      <p class="sec-note">按视频形态分四层：整节实录、单题讲解、板书速记、错题回看。四层共用同一套题目编号，避免同一道题在四处换名字。</p>
+      <div class="grid-3">
+        <div class="card">
+          <div class="meta"><span>整节实录</span><span>38—52 分钟</span></div>
+          <h3>整节实录与章节标记</h3>
+          <p>11 月 3 日《一元二次方程判别式》整节长 46 分钟，进度条按 5 个知识点打了章节点，第 27 分钟起进入含参讨论。</p>
+        </div>
+        <div class="card">
+          <div class="meta"><span>单题讲解</span><span>5—9 分钟</span></div>
+          <h3>单题切片与时间戳索引</h3>
+          <p>同一道压轴题被拆成审题、设元、验算三段，每段单独成片，简介里写明对应练习册页码，10 月 30 日起统一格式。</p>
+        </div>
+        <div class="card">
+          <div class="meta"><span>板书速记</span><span>图文</span></div>
+          <h3>板书结构与抄写顺序</h3>
+          <p>黑板分三栏：左栏题干条件、中栏推导、右栏结论与易错提醒。抄写顺序固定，学生拍照后按栏对齐复习。</p>
+        </div>
+        <div class="card">
+          <div class="meta"><span>错题回看</span><span>清单</span></div>
+          <h3>错题回看与二次订正</h3>
+          <p>每讲末尾留 3 分钟讲一道高频错题，10 月 26 日那期是去括号漏乘，留言区有 41 条补充解法。</p>
+        </div>
+        <div class="card">
+          <div class="meta"><span>节奏</span><span>每周 3 更</span></div>
+          <h3>更新节奏与跟课窗口</h3>
+          <p>周一、周三、周五晚 20:10 上传，周末做一次整周汇总。错过直播的学生用汇总帖补进度。</p>
+        </div>
+        <div class="card">
+          <div class="meta"><span>适配</span><span>人教/北师大</span></div>
+          <h3>教材版本与进度差异</h3>
+          <p>人教版的判别式在第 21 章，北师大版提前到第 2 章，切片简介会标注版本，避免学生按错顺序看。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="picks" aria-labelledby="h-picks">
+      <div class="block-head">
+        <h2 id="h-picks">精选内容推荐</h2>
+        <span class="tag">编辑挑选</span>
+      </div>
+      <p class="sec-note">挑选标准只有一个：看完能独立复述出解题第一步。以下 4 条均为近 30 天内上传。</p>
+      <div class="grid-2">
+        <div class="card">
+          <div class="thumb"><img src="https://picsum.photos/seed/an-an-quadratic/640/360" width="640" height="360" loading="lazy" alt="黑板上写的二次函数顶点式推导过程与坐标草图"></div>
+          <div class="meta"><span>11-07</span><span>第 3 讲</span><span>12 分 40 秒</span></div>
+          <h3>二次函数顶点式 12 题：配方法的四个卡点</h3>
+          <p>第 4 题把 a 提出来时符号写反，第 7 题配方后忘记还原常数项。视频在错误处停 4 秒，给出改法。</p>
+        </div>
+        <div class="card">
+          <div class="thumb"><img src="https://picsum.photos/seed/an-an-equation/640/360" width="640" height="360" loading="lazy" alt="练习册上用红笔标注的判别式讨论题和分类条件"></div>
+          <div class="meta"><span>11-05</span><span>整节实录</span><span>46 分钟</span></div>
+          <h3>一元二次方程判别式：含参题的三种分类</h3>
+          <p>按 Δ&gt;0、Δ=0、Δ&lt;0 分三类，每类配一道 2025 年区统考改编题。第 31 分钟补讲二次项系数为 0 的漏判。</p>
+        </div>
+        <div class="card">
+          <div class="thumb"><img src="https://picsum.photos/seed/an-an-notes/640/360" width="640" height="360" loading="lazy" alt="摊开的三色笔记，左侧题干右侧订正栏"></div>
+          <div class="meta"><span>11-02</span><span>图文</span><span>模板 v2.3</span></div>
+          <h3>三色笔记模板：题干、推导、订正各占一栏</h3>
+          <p>黑笔抄题干，蓝笔写推导，红笔只写错误原因。11 月 6 日加印错题栏，一页最多记两道题。</p>
+        </div>
+        <div class="card">
+          <div class="thumb"><img src="https://picsum.photos/seed/an-an-correction/640/360" width="640" height="360" loading="lazy" alt="作业本上去括号步骤的逐行订正痕迹"></div>
+          <div class="meta"><span>10-26</span><span>错题回看</span><span>7 分 12 秒</span></div>
+          <h3>去括号漏乘：41 条留言补出的六种解法</h3>
+          <p>原题是 3(2x−1)−2(x+3)。视频给出分配律展开，留言区有人用整体代换，思路更短但有前提条件。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="latest" aria-labelledby="h-latest">
+      <div class="block-head">
+        <h2 id="h-latest">最新更新</h2>
+        <span class="tag">近 30 天</span>
+      </div>
+      <ul class="list-compact">
+        <li><time datetime="2026-11-07">11-07</time><span><a href="/#picks">二次函数顶点式 12 题（第 3 讲）</a><span class="who">板书更新到第 9 题，附配方法检查表</span></span></li>
+        <li><time datetime="2026-11-06">11-06</time><span><a href="/#picks">三色笔记模板 v2.3</a><span class="who">新增错题栏与每周复盘格</span></span></li>
+        <li><time datetime="2026-11-05">11-05</time><span><a href="/#picks">一元二次方程判别式（整节实录）</a><span class="who">章节点由 3 个补到 5 个</span></span></li>
+        <li><time datetime="2026-11-03">11-03</time><span><a href="/#news">区统考改编题来源说明</a><span class="who">标注 2025 年两道原题的改动处</span></span></li>
+        <li><time datetime="2026-10-30">10-30</time><span><a href="/#channels">单题切片简介格式统一</a><span class="who">写明练习册页码与难度标记</span></span></li>
+        <li><time datetime="2026-10-26">10-26</time><span><a href="/#comments">去括号漏乘错题回看</a><span class="who">留言区补充至 41 条</span></span></li>
+        <li><time datetime="2026-10-21">10-21</time><span><a href="/#timeline">开学以来第 6 次板书规范调整</a><span class="who">右栏固定为结论与易错提醒</span></span></li>
+      </ul>
+    </section>
+
+    <section class="block" id="channels" aria-labelledby="h-channels">
+      <div class="block-head">
+        <h2 id="h-channels">频道分类</h2>
+        <span class="tag">9 个入口</span>
+      </div>
+      <ul class="channels">
+        <li><a href="/#overview">二次函数配方法<small>12 讲 · 顶点式专项</small></a></li>
+        <li><a href="/#overview">一元二次方程判别式<small>9 讲 · 含参讨论</small></a></li>
+        <li><a href="/#picks">三色笔记模板<small>图文 · 每周修订</small></a></li>
+        <li><a href="/#deep">压轴题审题顺序<small>8 讲 · 单题切片</small></a></li>
+        <li><a href="/#guide">错题二次订正法<small>6 讲 · 含订正栏</small></a></li>
+        <li><a href="/#comments">课堂提问回复<small>留言整理 · 每周一期</small></a></li>
+        <li><a href="/#timeline">板书规范调整记录<small>时间线 · 6 次</small></a></li>
+        <li><a href="/#news">区统考改编题来源<small>资讯 · 标注改动</small></a></li>
+        <li><a href="/#rec">跟课进度自查表<small>清单 · 按周打勾</small></a></li>
+      </ul>
+    </section>
+
+    <section class="block" id="deep" aria-labelledby="h-deep">
+      <div class="block-head">
+        <h2 id="h-deep">深度解析</h2>
+        <span class="tag">主体阅读</span>
+      </div>
+      <article class="deep">
+        <h2>观看时长与笔记页数不成正比：三个可核对的观察</h2>
+        <p>10 月 12 日到 11 月 7 日，频道共上传 14 条视频，总时长 6 小时 12 分。把每条视频的评论数、笔记模板下载情况和提问关键词放在一起看，会发现一个和直觉相反的现象：看完整节实录的学生，平均笔记页数低于只看单题切片的学生。</p>
+        <p class="pull"><span class="verdict">判断一：</span>整节实录适合建立知识顺序，单题切片适合补漏；把两者当成替代关系，笔记就会停在抄板书这一步。</p>
+
+        <h3>观察一：46 分钟实录带出 1.8 页笔记，12 分钟切片带出 2.6 页</h3>
+        <p>统计口径是这样的：10 月 26 日至 11 月 7 日，模板下载后回传的照片共 63 份，去掉重复提交，剩 51 份有效样本。看整节实录的学生平均写 1.8 页，看单题切片的学生平均写 2.6 页。差异集中在订正栏——切片视频暂停次数多，学生有停顿写错误原因。</p>
+        <p>这条样本量不大，不能推出普遍规律。但它至少说明一件事：<strong>笔记页数更多来自暂停和回看，不来自视频时长。</strong>把 46 分钟一口气播完，暂停次数通常只有 2 到 3 次。</p>
+
+        <h3>观察二：第 27 分钟的含参讨论，暂停率是前半段的三倍</h3>
+        <p>11 月 5 日《一元二次方程判别式》里，第 27 分钟开始讨论二次项系数为 0 的情况。后台进度条数据中，这一段的回看次数明显高于前 26 分钟。同一天留言里出现 9 条"系数为 0 要不要单独写"的提问，集中在 21:40 到 22:10 之间。</p>
+        <div class="scroll-x">
+          <table class="cmp">
+            <caption>11-05 实录片段回看次数对比（示例统计，样本 51 份）</caption>
+            <thead>
+              <tr><th>时间段</th><th>内容</th><th>平均回看次数</th><th>暂停后写笔记比例</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>00:00—26:00</td><td>判别式三种情况代入</td><td>0.9</td><td>34%</td></tr>
+              <tr><td>27:00—38:00</td><td>二次项系数为 0 的漏判</td><td>2.7</td><td>61%</td></tr>
+              <tr><td>39:00—46:00</td><td>两道区统考改编题</td><td>1.5</td><td>47%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="pull"><span class="verdict">判断二：</span>含参讨论是这类课的分水岭，卡住的学生多半不是不会算，而是没有先写"二次项系数不为 0"这个前提。把前提写在题干旁边，比记住三种情况更有效。</p>
+
+        <h3>观察三：说法差异来自教材版本，不是讲法前后矛盾</h3>
+        <p>有学生指出 10 月 14 日的视频里说"先看二次项系数"，10 月 28 日却先写判别式。两种顺序都能得到结果，区别在适用范围：人教版的编排先讲一般式，北师大版把配方前置。10 月 30 日简介里补了一行版本说明，之后没有再改。</p>
+        <p>需要区分的是：这是<strong>教材顺序差异</strong>，不是解法结论翻转。判别式的计算本身没有变化，变的是引入路径。把这条说清楚，比再录一版更正视频更有用。</p>
+
+        <h3>可核对清单：三件事都能自己验</h3>
+        <p>第一，找 11 月 5 日那条视频的 27 分 10 秒，看是否先写系数条件；第二，翻模板 v2.3 的错题栏，看是否有"错误原因"而不是只抄正确答案；第三，对照 10 月 30 日的简介修改记录，确认版本标注从哪天开始。三条都能对上，前面两个判断才站得住。</p>
+        <p>如果样本里出现反例——比如有人只看整节实录却写了 4 页笔记——那更可能说明这个人暂停次数多，而不是实录本身更适合做笔记。结论只到这一步，不往下推。</p>
+      </article>
+    </section>
+
+    <section class="block" id="guide" aria-labelledby="h-guide">
+      <div class="block-head">
+        <h2 id="h-guide">体验指南</h2>
+        <span class="tag">跟课 5 步</span>
+      </div>
+      <ol class="steps">
+        <li><div><h3>先看简介里的版本与页码</h3><p>人教版的判别式在第 21 章，北师大版在第 2 章。页码对不上时，先换版本再往下看。</p></div></li>
+        <li><div><h3>整节实录只播一遍，遇到章节点停一次</h3><p>第 27 分钟的含参讨论至少停一次，把"二次项系数不为 0"写进题干。</p></div></li>
+        <li><div><h3>单题切片用来补漏，不替代整节</h3><p>压轴题切成三段后，先看审题段，再看设元段。顺序反了会跳步。</p></div></li>
+        <li><div><h3>笔记按三色分栏抄，不整段抄板书</h3><p>黑笔抄题干，蓝笔写推导，红笔只写错误原因。一页最多两道题。</p></div></li>
+        <li><div><h3>周末用错题栏回看一次</h3><p>把本周红笔标注的题重做一遍，做对划掉，做错换一页重抄题干。</p></div></li>
+      </ol>
+    </section>
+
+    <section class="block" id="faq" aria-labelledby="h-faq">
+      <div class="block-head">
+        <h2 id="h-faq">常见问题</h2>
+        <span class="tag">按提问频次排</span>
+      </div>
+      <details class="faq">
+        <summary>二次函数配方法先提 a 还是先配方？</summary>
+        <div class="ans">先提二次项系数 a。以 y=2x²−8x+5 为例，先把 a 提出来写成 2(x²−4x)+5，再配成 2(x−2)²−3。跳过提 a 直接配方，最终常数项容易差 2 倍；第 4 题的错误就出在这里。</div>
+      </details>
+      <details class="faq">
+        <summary>一元二次方程判别式里，二次项系数为 0 怎么处理？</summary>
+        <div class="ans">先把二次项系数不为 0 写成前提，再算 Δ。若题目已说明是"一元二次方程"，该前提天然成立；若只说"方程"，就要单独讨论系数为 0 退化为一次方程的情况。11 月 5 日视频第 27 分钟起讲的就是这一层。</div>
+      </details>
+      <details class="faq">
+        <summary>整节实录和单题切片应该先看哪个？</summary>
+        <div class="ans">先看整节实录，建立知识顺序；再用切片补具体错题。两者是先后关系。10 月 26 日到 11 月 7 日的样本里，先看整节再回补切片的学生，订正栏写得更完整。</div>
+      </details>
+      <details class="faq">
+        <summary>三色笔记模板的错题栏具体怎么填？</summary>
+        <div class="ans">错题栏只写三行：错在哪一步、正确做法一句话、下次遇到同类题先做什么。不抄完整答案。11 月 6 日发布的 v2.3 把原来的一整栏拆成三行，一页最多两道题。</div>
+      </details>
+      <details class="faq">
+        <summary>人教版的进度和北师大版差多少？</summary>
+        <div class="ans">以判别式为例，人教版排在第 21 章，北师大版排在第 2 章，中间隔了大半个学期。切片简介从 10 月 30 日起统一标注版本，按自己教材的章节号找对应视频即可。</div>
+      </details>
+      <details class="faq">
+        <summary>压轴题审题顺序有没有固定模板？</summary>
+        <div class="ans">有，三步：圈出所有已知量、标出所求、写出能用的关系式。第 8 讲把这三步做成了可打印的横条，贴在练习册封面上。顺序不能倒，先列关系式再看已知量，容易漏条件。</div>
+      </details>
+      <details class="faq">
+        <summary>板书右栏为什么固定写结论和易错提醒？</summary>
+        <div class="ans">右栏位置固定，是为了拍照后按列对齐复习。10 月 21 日第 6 次规范调整后，右栏只放结论和一句易错提醒，推导过程留在中栏，方便第二次回看时只扫结论。</div>
+      </details>
+    </section>
+
+    <section class="block" id="comments" aria-labelledby="h-comments">
+      <div class="block-head">
+        <h2 id="h-comments">同学评论</h2>
+        <span class="tag">留言摘录</span>
+      </div>
+      <div class="comments">
+        <div class="cmt">
+          <div class="who"><span class="avatar" aria-hidden="true">林</span><span>林间小测 · 11-07</span></div>
+          <p>顶点式第 4 题那个负号，我上周作业里错了两次，视频停 4 秒改的那一下正好点出来。</p>
+        </div>
+        <div class="cmt tone-neutral">
+          <div class="who"><span class="avatar" aria-hidden="true">阿</span><span>阿青 · 11-06</span></div>
+          <p>模板页数是不是可以减到一页一道题？现在一页两道，抄完题干就没地方写推导了。</p>
+        </div>
+        <div class="cmt">
+          <div class="who"><span class="avatar" aria-hidden="true">周</span><span>周六补课 · 11-05</span></div>
+          <p>判别式第 27 分钟那段讲系数为 0，我之前一直漏，补上前提后同类题终于能对上了。</p>
+        </div>
+        <div class="cmt tone-warn">
+          <div class="who"><span class="avatar" aria-hidden="true">慢</span><span>慢半拍 · 11-05</span></div>
+          <p>整节 46 分钟对我偏长，看到 30 分钟就开始走神。能不能把区统考那两道题单独切出来？</p>
+        </div>
+        <div class="cmt">
+          <div class="who"><span class="avatar" aria-hidden="true">盒</span><span>铅笔盒 · 10-30</span></div>
+          <p>简介里加页码之后好找多了，原来要翻半天练习册才对上题号。</p>
+        </div>
+        <div class="cmt tone-neutral">
+          <div class="who"><span class="avatar" aria-hidden="true">三</span><span>三点半 · 10-26</span></div>
+          <p>去括号那道题用整体代换确实快，但前提是括号前系数相同，换个题就不成立了，别直接背。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="news" aria-labelledby="h-news">
+      <div class="block-head">
+        <h2 id="h-news">相关资讯</h2>
+        <span class="tag">来源与改动</span>
+      </div>
+      <ul class="list-compact">
+        <li><time datetime="2026-11-03">11-03</time><span><a href="/#deep">2025 年区统考两道改编题的改动说明</a><span class="who">原题条件由整数改为含参，其余未动</span></span></li>
+        <li><time datetime="2026-11-01">11-01</time><span><a href="/#guide">练习册页码对应关系补录至第 3 册</a><span class="who">覆盖 9 月以来的 14 条视频</span></span></li>
+        <li><time datetime="2026-10-28">10-28</time><span><a href="/#faq">人教与北师大版本对照表更新</a><span class="who">判别式章节号差异已标注</span></span></li>
+        <li><time datetime="2026-10-24">10-24</time><span><a href="/#timeline">板书规范第 6 次调整：右栏只放结论</a><span class="who">推导过程全部移入中栏</span></span></li>
+      </ul>
+    </section>
+
+    <section class="block" id="timeline" aria-labelledby="h-timeline">
+      <div class="block-head">
+        <h2 id="h-timeline">板书规范调整时间线</h2>
+        <span class="tag">6 次记录</span>
+      </div>
+      <ul class="timeline">
+        <li><time datetime="2026-10-21">10-21</time><p>第 6 次调整：右栏固定为结论加一条易错提醒，推导全部进中栏。原因是拍照后按列复习更省时间。</p></li>
+        <li><time datetime="2026-10-08">10-08</time><p>第 5 次调整：题干条件改用方框圈出，不再下划线。学生反映下划线和推导线混在一起。</p></li>
+        <li><time datetime="2026-09-24">09-24</time><p>第 4 次调整：每讲末尾预留 3 分钟错题回看，黑板上单独开一块区域。</p></li>
+        <li><time datetime="2026-09-10">09-10</time><p>第 3 次调整：单题切片简介必须写明练习册页码与难度标记。</p></li>
+        <li><time datetime="2026-08-27">08-27</time><p>第 2 次调整：三色笔记模板定稿，黑、蓝、红三色分工写进讲义首页。</p></li>
+        <li><time datetime="2026-08-14">08-14</time><p>第 1 次调整：整节实录开始打章节点，最初每节只打 3 个，后续补到 5 个。</p></li>
+      </ul>
+    </section>
+
+    <section class="block" id="rank" aria-labelledby="h-rank">
+      <div class="block-head">
+        <h2 id="h-rank">近 30 天回看榜</h2>
+        <span class="tag">按回看次数</span>
+      </div>
+      <ul class="rank">
+        <li><span><a href="/#picks">二次函数顶点式 12 题（第 3 讲）</a></span><span class="num">回看 2.9 次 / 人</span></li>
+        <li><span><a href="/#picks">一元二次方程判别式（整节实录）</a></span><span class="num">回看 2.1 次 / 人</span></li>
+        <li><span><a href="/#picks">三色笔记模板 v2.3 讲解</a></span><span class="num">回看 1.8 次 / 人</span></li>
+        <li><span><a href="/#picks">去括号漏乘错题回看</a></span><span class="num">回看 1.6 次 / 人</span></li>
+        <li><span><a href="/#guide">压轴题审题顺序（第 8 讲）</a></span><span class="num">回看 1.4 次 / 人</span></li>
+      </ul>
+    </section>
+
+    <section class="block" id="rec" aria-labelledby="h-rec">
+      <div class="block-head">
+        <h2 id="h-rec">相关推荐</h2>
+        <span class="tag">按需求找</span>
+      </div>
+      <ul class="tags">
+        <li><a href="/#picks">二次函数配方法专项</a></li>
+        <li><a href="/#picks">一元二次方程判别式含参题</a></li>
+        <li><a href="/#guide">三色笔记模板怎么用</a></li>
+        <li><a href="/#guide">压轴题审题三步法</a></li>
+        <li><a href="/#comments">去括号漏乘六种解法</a></li>
+        <li><a href="/#timeline">板书右栏结论区</a></li>
+        <li><a href="/#news">区统考改编题来源</a></li>
+        <li><a href="/#rec">跟课进度自查表</a></li>
+        <li><a href="/#faq">人教版北师大版进度对照</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <aside class="side" aria-label="侧栏导航与补充">
+    <nav class="side-card side-nav" id="sideNav" aria-label="本页栏目导航">
+      <h2>本页栏目</h2>
+      <ul>
+        <li><a href="/#overview">领域概览</a></li>
+        <li><a href="/#picks">精选内容推荐</a></li>
+        <li><a href="/#latest">最新更新</a></li>
+        <li><a href="/#channels">频道分类</a></li>
+        <li><a href="/#deep">深度解析</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#comments">同学评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#timeline">板书规范时间线</a></li>
+        <li><a href="/#rank">近 30 天回看榜</a></li>
+        <li><a href="/#rec">相关推荐</a></li>
+      </ul>
+    </nav>
+
+    <div class="side-card">
+      <h2>本周跟课自查</h2>
+      <ul class="side-list">
+        <li><a href="/#picks">配方法第 3 讲暂停点</a><span class="n">2 处</span></li>
+        <li><a href="/#picks">判别式含参讨论</a><span class="n">1 处</span></li>
+        <li><a href="/#picks">模板错题栏回填</a><span class="n">3 题</span></li>
+        <li><a href="/#guide">压轴题审题横条</a><span class="n">已打印</span></li>
+      </ul>
+      <p class="tip">自查表在每周日晚汇总，未打勾的项顺延到下周，不重新累计。</p>
+    </div>
+
+    <div class="side-card">
+      <h2>一条约束</h2>
+      <p class="quote-side">"先把二次项系数不为 0 写在题干旁边，再动笔算。"——11 月 5 日实录第 27 分 10 秒，原话保留。</p>
+    </div>
+
+    <div class="side-card">
+      <h2>热度条目录</h2>
+      <ul class="side-list">
+        <li><a href="/#deep">回看次数与笔记页数对照表</a><span class="n">11-05</span></li>
+        <li><a href="/#news">改编题改动说明</a><span class="n">11-03</span></li>
+        <li><a href="/#timeline">第 6 次板书调整</a><span class="n">10-21</span></li>
+      </ul>
+      <p class="tip">条目数字均为示例统计，口径写在深度解析的样本说明里。</p>
+    </div>
+  </aside>
+</div>
+
+<footer class="site-foot" id="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 64 64" role="img" aria-label="安安老师记bilibili 页尾标志">
+            <rect width="64" height="64" rx="14" fill="#f4e9d8"/>
+            <path d="M18 44V20h8v9h12v-9h8v24h-8v-9H26v9z" fill="#22443b"/>
+            <circle cx="49" cy="15" r="5" fill="#c8842c"/>
+          </svg>
+          <strong>安安老师记bilibili</strong>
+        </div>
+        <p>把课堂拆成可暂停的片段、可按栏抄写的板书和能自查的错题清单，按教材版本与章节号归档。</p>
+        <p>页脚更新时间：2026-11-08。对应正文可核对项：11-07 顶点式第 3 讲、11-06 笔记模板 v2.3、11-05 判别式整节实录。</p>
+      </div>
+      <div>
+        <h2>内容频道</h2>
+        <ul>
+          <li><a href="/#overview">二次函数配方法</a></li>
+          <li><a href="/#overview">一元二次方程判别式</a></li>
+          <li><a href="/#picks">单题切片</a></li>
+          <li><a href="/#picks">整节实录</a></li>
+          <li><a href="/#comments">课堂提问回复</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>工具与规范</h2>
+        <ul>
+          <li><a href="/#guide">三色笔记模板</a></li>
+          <li><a href="/#guide">跟课 5 步</a></li>
+          <li><a href="/#timeline">板书规范记录</a></li>
+          <li><a href="/#rank">近 30 天回看榜</a></li>
+          <li><a href="/#rec">相关推荐索引</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>说明</h2>
+        <ul>
+          <li><a href="/#deep">统计口径与样本说明</a></li>
+          <li><a href="/#news">改编题来源标注</a></li>
+          <li><a href="/#faq">版本差异对照</a></li>
+        </ul>
+        <p>页面条目、留言与统计数字均为示例数据，用于说明栏目结构，不构成学习效果承诺。</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 安安老师记bilibili · 课堂实录与复盘笔记</span>
+      <span>最近更新 2026-11-08 · 内容以示例为主</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="回到页面顶部">回到顶部</button>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "安安老师记bilibili",
+  "inLanguage": "zh-CN",
+  "description": "聚焦初中数学课堂实录、板书复盘与学习笔记整理的静态首页。"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "二次函数配方法先提 a 还是先配方？",
+      "acceptedAnswer": {"@type": "Answer", "text": "先提二次项系数 a，再配方。例如 y=2x²−8x+5 先写成 2(x²−4x)+5，再配成 2(x−2)²−3。跳过提 a 直接配方，常数项容易差倍数。"}
+    },
+    {
+      "@type": "Question",
+      "name": "一元二次方程判别式里，二次项系数为 0 怎么处理？",
+      "acceptedAnswer": {"@type": "Answer", "text": "先把二次项系数不为 0 写成前提，再计算 Δ。题目只说方程时，需单独讨论系数为 0 退化为一次方程的情况。"}
+    },
+    {
+      "@type": "Question",
+      "name": "整节实录和单题切片应该先看哪个？",
+      "acceptedAnswer": {"@type": "Answer", "text": "先看整节实录建立知识顺序，再用单题切片补具体错题。两者是先后关系而不是替代关系。"}
+    },
+    {
+      "@type": "Question",
+      "name": "三色笔记模板的错题栏具体怎么填？",
+      "acceptedAnswer": {"@type": "Answer", "text": "错题栏只写三行：错在哪一步、正确做法一句话、下次遇到同类题先做什么。不抄完整答案，一页最多两道题。"}
+    },
+    {
+      "@type": "Question",
+      "name": "人教版的进度和北师大版差多少？",
+      "acceptedAnswer": {"@type": "Answer", "text": "以判别式为例，人教版在第 21 章，北师大版在第 2 章，中间隔了大半个学期。单题切片简介自 10 月 30 日起标注教材版本。"}
+    }
+  ]
+}
+</script>
+
+<script>
+(function(){
+  var toggle=document.querySelector('.nav-toggle');
+  var nav=document.getElementById('mainNav');
+  if(toggle&&nav){
+    toggle.addEventListener('click',function(){
+      var open=nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded',open?'true':'false');
+      toggle.textContent=open?'收起':'菜单';
+    });
+    nav.addEventListener('click',function(e){
+      if(e.target.closest('a')&&window.matchMedia('(max-width:760px)').matches){
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded','false');
+        toggle.textContent='菜单';
+      }
+    });
+  }
+
+  var toTop=document.getElementById('toTop');
+  function onScroll(){
+    if(window.scrollY>420){toTop.classList.add('show');}
+    else{toTop.classList.remove('show');}
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+  toTop.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+  });
+
+  var links=Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var targets=links.map(function(a){
+    var id=a.getAttribute('href').split('#')[1];
+    return document.getElementById(id);
+  }).filter(Boolean);
+  if('IntersectionObserver' in window&&targets.length){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          links.forEach(function(a){
+            a.classList.toggle('active',a.getAttribute('href').split('#')[1]===en.target.id);
+          });
+        }
+      });
+    },{rootMargin:'-90px 0px -65% 0px',threshold:0});
+    targets.forEach(function(t){io.observe(t);});
+  }
+
+  var form=document.getElementById('searchForm');
+  var input=document.getElementById('q');
+  var msg=document.getElementById('searchMsg');
+  var searchable=Array.prototype.slice.call(document.querySelectorAll('main section.block, aside .side-card'));
+  function doSearch(e){
+    if(e)e.preventDefault();
+    var kw=(input.value||'').trim().toLowerCase();
+    if(!kw){
+      msg.hidden=true;msg.textContent='';
+      searchable.forEach(function(s){s.style.display='';});
+      return;
+    }
+    var hits=0;
+    searchable.forEach(function(sec){
+      var text=(sec.textContent||'').toLowerCase();
+      var ok=text.indexOf(kw)>-1;
+      sec.style.display=ok?'':'none';
+      if(ok)hits++;
+    });
+    msg.hidden=false;
+    if(hits===0){
+      msg.textContent='没有找到“'+input.value.trim()+'”。可以试试：判别式、配方法、笔记模板、错题回看。';
+    }else{
+      msg.textContent='找到 '+hits+' 个相关板块，已隐藏其余内容。';
+    }
+  }
+  form.addEventListener('submit',doSearch);
+  input.addEventListener('input',function(){ if(!input.value.trim()) doSearch(); });
+})();
+</script>
+</body>
+                                                                                                     </html>
