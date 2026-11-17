@@ -1,0 +1,867 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>npxvip 每日大赛-赛事日程与作品解析</title>
+<meta name="description" content="npxvip 每日大赛汇集每日主题赛程、参赛作品与评委口径，按赛道整理评分拆解、直播时间表与选手反馈，帮助参赛者和观众核对规则细节与截止时间。">
+<meta name="keywords" content="npxvip 每日大赛">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23133b34'/%3E%3Cpath d='M18 44V20h7l7 12 7-12h7v24h-6V30l-6 10h-4l-6-10v14z' fill='%23e8c97a'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#14211d;
+  --ink-soft:#3c4f48;
+  --paper:#f6f3ec;
+  --paper-2:#fffdf7;
+  --line:#d9d2c3;
+  --brand:#133b34;
+  --brand-2:#1f5a4d;
+  --accent:#b8862f;
+  --accent-soft:#f0e2c2;
+  --danger:#8c3a25;
+  --radius:10px;
+  --radius-s:6px;
+  --shadow:0 1px 2px rgba(20,33,29,.06),0 8px 24px -18px rgba(20,33,29,.4);
+  --fs-h1:clamp(1.7rem,3.6vw,2.6rem);
+  --fs-h2:clamp(1.22rem,2.2vw,1.5rem);
+  --fs-h3:1.06rem;
+  --sp:clamp(1rem,2.4vw,1.6rem);
+  --stick:104px;
+  --font:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--stick)}
+body{margin:0;font-family:var(--font);background:var(--paper);color:var(--ink);line-height:1.75;font-size:16px}
+img{max-width:100%;display:block}
+a{color:var(--brand-2);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+h1,h2,h3{line-height:1.35;margin:0 0 .5em}
+ul,ol{margin:.4em 0 .8em;padding-left:1.3em}
+p{margin:.5em 0 .8em}
+.wrap{width:min(1180px,100% - 2rem);margin-inline:auto}
+
+/* sticky announcement */
+.announce{position:sticky;top:0;z-index:60;background:var(--brand);color:#f2efe4;font-size:.86rem}
+.announce .wrap{display:flex;gap:.6rem;align-items:center;justify-content:space-between;padding:.42rem 0;flex-wrap:wrap}
+.announce b{color:var(--accent-soft);font-weight:600}
+.announce .tag{background:var(--accent);color:#241a06;border-radius:4px;padding:0 .4rem;font-weight:700;letter-spacing:.02em}
+.announce a{color:#fff;text-decoration:underline;text-underline-offset:2px}
+
+/* header */
+.site-head{position:sticky;top:37px;z-index:55;background:rgba(250,247,240,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.head-inner{display:flex;align-items:center;gap:1rem;padding:.55rem 0}
+.brand{display:flex;align-items:center;gap:.55rem;flex:none}
+.brand svg{width:38px;height:38px;flex:none}
+.brand-text{font-weight:800;letter-spacing:.02em;color:var(--brand);font-size:1.02rem;line-height:1.1}
+.brand-text small{display:block;font-weight:500;font-size:.68rem;color:var(--ink-soft);letter-spacing:.08em}
+.main-nav{margin-left:auto}
+.nav-list{display:flex;gap:.15rem;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.nav-list a{display:block;padding:.42rem .6rem;border-radius:6px;font-size:.9rem;color:var(--ink-soft);white-space:nowrap}
+.nav-list a:hover,.nav-list a:focus-visible{background:var(--accent-soft);color:var(--brand);text-decoration:none}
+.nav-list a.active{background:var(--brand);color:#fff}
+.search-mini{display:flex;align-items:center;gap:.3rem;flex:none}
+.search-mini input{width:9.5rem;padding:.36rem .55rem;border:1px solid var(--line);border-radius:6px;background:var(--paper-2);font-size:.85rem;font-family:inherit;color:var(--ink)}
+.search-mini button{border:1px solid var(--brand);background:var(--brand);color:#fff;border-radius:6px;padding:.36rem .6rem;font-size:.85rem;cursor:pointer}
+.menu-btn{display:none;border:1px solid var(--line);background:var(--paper-2);border-radius:6px;padding:.4rem .55rem;font-size:.9rem;cursor:pointer;align-items:center;gap:.35rem;color:var(--brand);font-weight:600}
+.menu-btn:hover{background:var(--accent-soft)}
+.search-msg{font-size:.82rem;color:var(--danger);padding:.1rem 0 0}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(900px 320px at 88% -10%,rgba(184,134,47,.22),transparent 70%),
+  linear-gradient(160deg,#12332c 0%,#1a4a40 55%,#20594b 100%);
+  color:#f4f1e6}
+.hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:2rem;align-items:center;padding:clamp(1.8rem,5vw,3.4rem) 0}
+.hero h1{font-size:var(--fs-h1);color:#fff;letter-spacing:.01em;margin-bottom:.4rem}
+.hero .eyebrow{display:inline-flex;align-items:center;gap:.45rem;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-soft);border:1px solid rgba(240,226,194,.4);border-radius:99px;padding:.15rem .7rem;margin-bottom:.9rem}
+.hero p.lede{font-size:1rem;color:#dcd8c8;max-width:38rem}
+.hero-actions{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.1rem}
+.btn{display:inline-block;padding:.55rem 1.05rem;border-radius:7px;font-size:.92rem;font-weight:600;border:1px solid transparent;transition:transform .15s ease}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-primary{background:var(--accent);color:#231a06}
+.btn-ghost{border-color:rgba(244,241,230,.5);color:#f4f1e6}
+.hero-metrics{display:flex;gap:1.4rem;margin-top:1.5rem;flex-wrap:wrap}
+.hero-metrics div{min-width:5.2rem}
+.hero-metrics strong{display:block;font-size:1.28rem;color:#fff;font-variant-numeric:tabular-nums}
+.hero-metrics span{font-size:.76rem;color:#c9c6b4;letter-spacing:.06em}
+.hero-visual{position:relative;aspect-ratio:1/.86;min-height:220px}
+.hero-visual svg{width:100%;height:100%;display:block}
+
+/* filters */
+.filters{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;padding:.8rem 0 0}
+.filters span{font-size:.82rem;color:var(--ink-soft);margin-right:.2rem}
+.chip{border:1px solid var(--line);background:var(--paper-2);border-radius:99px;padding:.22rem .7rem;font-size:.82rem;color:var(--ink-soft);cursor:pointer;font-family:inherit}
+.chip[aria-pressed="true"]{background:var(--brand);color:#fff;border-color:var(--brand)}
+
+/* layout */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:2rem;align-items:start;padding:1.6rem 0 3rem}
+section{scroll-margin-top:var(--stick)}
+.panel{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(1rem,2.2vw,1.5rem);box-shadow:var(--shadow);margin-bottom:1.5rem}
+.panel h2{font-size:var(--fs-h2);color:var(--brand);display:flex;align-items:center;gap:.55rem}
+.panel h2::before{content:"";width:5px;height:1.15em;background:var(--accent);border-radius:2px;flex:none}
+.panel .sub{color:var(--ink-soft);font-size:.9rem;margin-top:-.2em}
+.kicker{font-size:.76rem;letter-spacing:.12em;color:var(--accent);font-weight:700;text-transform:uppercase}
+
+/* cards grid */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-s);padding:.9rem 1rem;display:flex;flex-direction:column;transition:transform .15s ease,box-shadow .15s ease}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.card h3{font-size:var(--fs-h3);margin-bottom:.25rem}
+.card p{font-size:.88rem;color:var(--ink-soft);margin:.2rem 0 .6rem}
+.card .meta{font-size:.76rem;color:#6c7a73;margin-top:auto;letter-spacing:.02em}
+.badge{display:inline-block;font-size:.72rem;padding:.08rem .48rem;border-radius:99px;background:var(--accent-soft);color:#5c4310;border:1px solid #e3cf9f;margin-right:.3rem}
+.badge.live{background:#e5efe9;color:#1f5a4d;border-color:#b9d4c7}
+.badge.done{background:#ece9e1;color:#5a6157;border-color:#d5d0c4}
+
+/* list */
+.tight-list{list-style:none;padding:0;margin:0}
+.tight-list li{display:grid;grid-template-columns:auto 1fr auto;gap:.6rem;align-items:baseline;padding:.55rem 0;border-bottom:1px dashed var(--line);font-size:.9rem}
+.tight-list li:last-child{border-bottom:none}
+.tight-list time{font-size:.78rem;color:var(--accent);font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.tight-list .who{font-size:.76rem;color:#77837b;white-space:nowrap}
+
+/* steps */
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:.7rem}
+.steps li{counter-increment:s;position:relative;padding:.7rem .8rem .7rem 2.6rem;background:#fff;border:1px solid var(--line);border-radius:var(--radius-s);font-size:.9rem}
+.steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:.7rem;top:.7rem;width:1.45rem;height:1.45rem;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center;font-size:.74rem;font-weight:700}
+
+/* compare table */
+.compare{width:100%;border-collapse:collapse;font-size:.87rem;margin:.4rem 0}
+.compare caption{text-align:left;font-size:.82rem;color:var(--ink-soft);padding-bottom:.4rem}
+.compare th,.compare td{border:1px solid var(--line);padding:.5rem .6rem;vertical-align:top;text-align:left}
+.compare th{background:#efeae0;color:var(--brand);font-weight:700;font-size:.82rem}
+.compare td:first-child{font-weight:600;white-space:nowrap;background:#faf7f0}
+
+/* analysis */
+.analysis{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:1.4rem}
+.analysis article h3{margin-top:1.2rem;color:var(--brand-2);font-size:1.04rem;border-left:3px solid var(--accent);padding-left:.55rem}
+.analysis article h3:first-of-type{margin-top:.4rem}
+.pullquote{border-left:4px solid var(--accent);background:#fbf6e9;padding:.8rem 1rem;border-radius:0 var(--radius-s) var(--radius-s) 0;font-size:.95rem;color:#3a3222;margin:1rem 0}
+.pullquote cite{display:block;font-size:.78rem;color:#7a6b4d;font-style:normal;margin-top:.35rem}
+.factbox{border:1px solid var(--line);border-radius:var(--radius-s);background:#fff;padding:.7rem .8rem;font-size:.84rem;height:fit-content;position:sticky;top:calc(var(--stick) + 10px)}
+.factbox h3{font-size:.9rem;color:var(--brand);margin-bottom:.4rem}
+.factbox table{width:100%;border-collapse:collapse;font-size:.8rem}
+.factbox td{padding:.25rem 0;border-bottom:1px dashed var(--line);vertical-align:top}
+.factbox td:first-child{color:var(--ink-soft);white-space:nowrap;padding-right:.4rem}
+.factbox tr:last-child td{border-bottom:none}
+
+/* faq */
+details{border:1px solid var(--line);border-radius:var(--radius-s);background:#fff;margin-bottom:.55rem}
+details[open]{background:#fffdf6}
+summary{cursor:pointer;padding:.65rem .85rem;font-weight:600;font-size:.92rem;color:var(--brand);list-style:none;display:flex;justify-content:space-between;gap:.8rem;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-weight:700;color:var(--accent);font-size:1.1rem;line-height:1}
+details[open] summary::after{content:"–"}
+details .ans{padding:0 .85rem .8rem;font-size:.88rem;color:var(--ink-soft);border-top:1px dashed var(--line);padding-top:.6rem}
+
+/* comments */
+.comments{display:grid;gap:.8rem}
+.comment{border:1px solid var(--line);border-radius:var(--radius-s);background:#fff;padding:.7rem .85rem;font-size:.88rem}
+.comment header{display:flex;gap:.5rem;align-items:baseline;flex-wrap:wrap;margin-bottom:.25rem}
+.comment .name{font-weight:700;color:var(--brand)}
+.comment .time{font-size:.75rem;color:#83908a;font-variant-numeric:tabular-nums}
+.comment .tag{font-size:.72rem;background:#eef3ef;color:#1f5a4d;border:1px solid #c9dbd1;border-radius:4px;padding:.02rem .4rem}
+.comment p{margin:.15rem 0 0}
+
+/* tags */
+.tag-index{display:flex;flex-wrap:wrap;gap:.45rem;padding:0;margin:.4rem 0 0;list-style:none}
+.tag-index a{display:inline-block;font-size:.84rem;padding:.3rem .7rem;border:1px solid var(--line);border-radius:99px;background:#fff;color:var(--ink-soft)}
+.tag-index a:hover{background:var(--accent-soft);color:#4c3a11;border-color:#dfc68d;text-decoration:none}
+
+/* timeline */
+.timeline{list-style:none;padding:0;margin:0;border-left:2px solid #d8cfbb;margin-left:.4rem}
+.timeline li{position:relative;padding:.1rem 0 .9rem 1.1rem}
+.timeline li::before{content:"";position:absolute;left:-6px;top:.55rem;width:10px;height:10px;border-radius:50%;background:var(--paper);border:2px solid var(--accent)}
+.timeline time{font-size:.78rem;font-weight:700;color:var(--accent);display:block}
+.timeline p{margin:.1rem 0 0;font-size:.88rem;color:var(--ink-soft)}
+
+/* ranking */
+.rank{list-style:none;padding:0;margin:0;counter-reset:r}
+.rank li{counter-increment:r;display:grid;grid-template-columns:1.9rem 1fr auto;gap:.5rem;align-items:center;padding:.55rem .2rem;border-bottom:1px dashed var(--line);font-size:.9rem}
+.rank li::before{content:counter(r);font-weight:800;color:#fff;background:var(--brand);width:1.5rem;height:1.5rem;border-radius:50%;display:grid;place-items:center;font-size:.76rem}
+.rank li:nth-child(1)::before{background:var(--accent);color:#2b1f06}
+.rank .score{font-variant-numeric:tabular-nums;font-weight:700;color:var(--brand-2)}
+
+/* sidebar */
+aside{min-width:0}
+.side-card{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);padding:1rem;margin-bottom:1.2rem;box-shadow:var(--shadow)}
+.side-card h2{font-size:1rem;color:var(--brand);margin-bottom:.5rem;display:flex;gap:.45rem;align-items:center}
+.side-card h2::before{content:"";width:4px;height:1em;background:var(--accent);border-radius:2px}
+.side-nav{list-style:none;margin:0;padding:0;font-size:.87rem}
+.side-nav a{display:block;padding:.3rem .5rem;border-radius:5px;border-left:3px solid transparent;color:var(--ink-soft)}
+.side-nav a:hover{background:#f2ecdd;text-decoration:none}
+.side-nav a.active{border-left-color:var(--accent);background:#f5eeda;color:var(--brand);font-weight:700}
+.side-list{list-style:none;padding:0;margin:0;font-size:.85rem}
+.side-list li{padding:.35rem 0;border-bottom:1px dashed var(--line)}
+.side-list li:last-child{border-bottom:none}
+.side-list b{color:var(--brand);font-variant-numeric:tabular-nums}
+
+/* footer */
+.site-foot{background:var(--brand);color:#d8d5c6;font-size:.87rem;padding:2.2rem 0 1.2rem}
+.foot-grid{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:1.6rem}
+.site-foot h3{font-size:.9rem;color:#fff;margin-bottom:.5rem;letter-spacing:.04em}
+.site-foot a{color:#d8d5c6}
+.site-foot a:hover{color:#fff}
+.site-foot ul{list-style:none;padding:0;margin:0;font-size:.85rem}
+.site-foot li{padding:.14rem 0}
+.foot-brand{display:flex;align-items:center;gap:.6rem;margin-bottom:.6rem;color:#fff;font-weight:800}
+.foot-brand svg{width:32px;height:32px}
+.foot-note{border-top:1px solid rgba(255,255,255,.18);margin-top:1.5rem;padding-top:1rem;font-size:.78rem;color:#adafa1;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+
+/* to top */
+#toTop{position:fixed;right:1rem;bottom:1rem;z-index:70;width:2.7rem;height:2.7rem;border-radius:50%;border:1px solid var(--accent);background:var(--paper-2);color:var(--brand);font-size:1.05rem;cursor:pointer;box-shadow:var(--shadow);opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s}
+#toTop.show{opacity:1;visibility:visible}
+
+/* responsive */
+@media (max-width:960px){
+  .layout{grid-template-columns:1fr}
+  aside{order:2}
+  .hero .wrap{grid-template-columns:1fr;padding-top:1.6rem}
+  .hero-visual{max-width:420px;width:100%;justify-self:center}
+  .analysis{grid-template-columns:1fr}
+  .factbox{position:static}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:800px){
+  .site-head{top:0}
+  .head-inner{flex-wrap:wrap;gap:.5rem}
+  .menu-btn{display:inline-flex;margin-left:auto}
+  .main-nav{display:none;width:100%;order:5;margin-left:0}
+  .main-nav.open{display:block}
+  .nav-list{flex-direction:column;gap:0;border-top:1px solid var(--line);padding-top:.4rem}
+  .nav-list a{padding:.55rem .5rem}
+  .search-mini{order:4;width:100%}
+  .search-mini input{flex:1;width:auto}
+  html{scroll-padding-top:70px}
+  :root{--stick:70px}
+}
+@media (max-width:520px){
+  .hero-metrics{gap:1rem}
+  .foot-grid{grid-template-columns:1fr}
+  .tight-list li{grid-template-columns:auto 1fr;gap:.3rem .6rem}
+  .tight-list .who{grid-column:2;justify-self:start}
+  .compare{font-size:.8rem}
+  .compare th,.compare td{padding:.35rem .4rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+  .card:hover,.btn:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="announce" id="announce">
+  <div class="wrap">
+    <span><span class="tag">公告</span> <b>npxvip</b> 第 46 期「剪辑节奏」赛道于 2026-11-08 09:00 开赛，提交窗口 20 小时。</span>
+    <a href="/#latest">查看本期提交名单 →</a>
+  </div>
+</div>
+
+<header class="site-head" id="siteHead">
+  <div class="wrap head-inner">
+    <a class="brand" href="/#top" aria-label="npxvip 每日大赛首页">
+      <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#133b34"/>
+        <path d="M14 46V18h6.5L32 36.5 43.5 18H50v28h-5.6V28.4L34.6 44h-5.2L19.6 28.4V46z" fill="#e8c97a"/>
+        <circle cx="49" cy="15" r="4.5" fill="#f0e2c2"/>
+      </svg>
+      <span class="brand-text">npxvip<br><small>每日大赛</small></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">导航 ▾</button>
+    <nav class="main-nav" id="mainNav" aria-label="主题导航">
+      <ul class="nav-list">
+        <li><a href="/#overview">赛道概览</a></li>
+        <li><a href="/#picks">精选作品</a></li>
+        <li><a href="/#latest">今日更新</a></li>
+        <li><a href="/#channels">分类入口</a></li>
+        <li><a href="/#deep">赛制拆解</a></li>
+        <li><a href="/#guide">参赛指南</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#board">积分榜</a></li>
+      </ul>
+    </nav>
+    <div class="search-mini">
+      <input id="searchInput" type="search" placeholder="搜赛道/选手/规则" aria-label="站内搜索">
+      <button type="button" id="searchBtn">查找</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="heroTitle">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">NOV 08 · 第 46 期</span>
+      <h1 id="heroTitle">npxvip 每日大赛</h1>
+      <p class="lede">每天一个命题、一条赛道、48 小时交付。收录开赛日程、参赛作品与评委打分口径，把“谁拿分、为什么拿分”拆到可核对的细则上。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/#latest">看今日命题</a>
+        <a class="btn btn-ghost" href="/#guide">新选手流程</a>
+      </div>
+      <div class="hero-metrics">
+        <div><strong>46</strong><span>累计期数</span></div>
+        <div><strong>1,183</strong><span>已提交作品</span></div>
+        <div><strong>9</strong><span>常设赛道</span></div>
+        <div><strong>72h</strong><span>复核周期</span></div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 400 344" role="img">
+        <defs>
+          <linearGradient id="gA" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#f0e2c2" stop-opacity=".95"/>
+            <stop offset="1" stop-color="#b8862f" stop-opacity=".55"/>
+          </linearGradient>
+        </defs>
+        <rect x="18" y="26" width="364" height="292" rx="16" fill="#0e2f29" stroke="#2c6a5b" stroke-width="1.5"/>
+        <g stroke="#2c6a5b" stroke-width="1" opacity=".55">
+          <path d="M18 106h364M18 186h364M18 266h364"/>
+          <path d="M128 26v292M238 26v292M348 26v292"/>
+        </g>
+        <path d="M40 262 L104 214 L162 236 L226 150 L296 178 L358 96" fill="none" stroke="url(#gA)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="104" cy="214" r="6" fill="#f0e2c2"/>
+        <circle cx="226" cy="150" r="6" fill="#f0e2c2"/>
+        <circle cx="358" cy="96" r="7" fill="#e8c97a"/>
+        <g font-family="PingFang SC,Microsoft YaHei,sans-serif" fill="#cfe3da" font-size="12">
+          <text x="34" y="56">赛道评分权重</text>
+          <text x="34" y="132">命题</text>
+          <text x="34" y="212">执行</text>
+          <text x="34" y="292">传播</text>
+        </g>
+        <g fill="#e8c97a" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="11">
+          <text x="292" y="132">40%</text>
+          <text x="292" y="212">35%</text>
+          <text x="292" y="292">25%</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="layout">
+
+    <div class="main-col">
+
+      <!-- 1 overview -->
+      <section class="panel" id="overview">
+        <span class="kicker">01 / 领域概览</span>
+        <h2>赛道结构：九个常设命题方向</h2>
+        <p class="sub">每期由主办方从常设赛道中抽一条，给出命题卡与三条硬性限制，交付周期 48 小时，第 46 期起新增“复核回执”。</p>
+        <div class="card-grid">
+          <div class="card">
+            <h3>剪辑节奏</h3>
+            <p>60–90 秒成片，卡点误差需在 0.2 秒内。第 46 期命题要求“三段变速”。</p>
+            <span class="meta"><span class="badge live">进行中</span>提交 128 份</span>
+          </div>
+          <div class="card">
+            <h3>分镜叙事</h3>
+            <p>8 格分镜图 + 200 字调度说明，评审看镜头逻辑而非画功。</p>
+            <span class="meta"><span class="badge done">已完成</span>第 45 期冠军 林岫</span>
+          </div>
+          <div class="card">
+            <h3>标题文案</h3>
+            <p>为给定素材拟 3 条 18 字内标题，按点击意图与信息量双向打分。</p>
+            <span class="meta"><span class="badge done">已完成</span>通过率 34%</span>
+          </div>
+          <div class="card">
+            <h3>配乐贴合</h3>
+            <p>同一素材配 2 条不同情绪音轨，附 A/B 听感说明。</p>
+            <span class="meta">下期拟开 · 11-10</span>
+          </div>
+          <div class="card">
+            <h3>封面构图</h3>
+            <p>竖屏 3:4，主视觉落在安全区内，限用两种字号。</p>
+            <span class="meta">第 43 期复盘已发</span>
+          </div>
+          <div class="card">
+            <h3>直播切片</h3>
+            <p>从 40 分钟录播里剪出 3 个钩子，要求前 3 秒完成情境交代。</p>
+            <span class="meta">报名 76 人</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2 picks -->
+      <section class="panel" id="picks">
+        <span class="kicker">02 / 精选推荐</span>
+        <h2>本周值得开两倍速看的五件作品</h2>
+        <p class="sub">按评委初筛留下的复核笔记整理，标注了得分点位置，方便对着时间轴看。</p>
+        <div class="card-grid">
+          <div class="card">
+            <h3>《末班地铁的十七秒》</h3>
+            <p>第 45 期分镜赛道，选手 沈屿。第 4 格到第 5 格用同一根扶手完成空间跳跃，复核笔记写“省掉一次切镜”。</p>
+            <span class="meta"><span class="badge">分镜 92.5</span>11-06 复核</span>
+          </div>
+          <div class="card">
+            <h3>《把倒计时藏进呼吸》</h3>
+            <p>剪辑节奏第 44 期。变速点落在第 31 秒的换气声上，误差 0.08 秒，是当期唯一低于 0.1 秒的提交。</p>
+            <span class="meta"><span class="badge">节奏 94.0</span>11-04</span>
+          </div>
+          <div class="card">
+            <h3>《三条标题，一条被驳回》</h3>
+            <p>标题赛道第 43 期。选手 周程第三条因“信息密度超纲”被扣 6 分，驳回理由原文可查。</p>
+            <span class="meta"><span class="badge">文案 88.0</span>11-02</span>
+          </div>
+          <div class="card">
+            <h3>《雨声当鼓点》</h3>
+            <p>配乐贴合预演赛。两轨分别为 72BPM 与 96BPM，说明里写了换轨后观众留存假设。</p>
+            <span class="meta"><span class="badge">预演</span>11-05</span>
+          </div>
+          <div class="card">
+            <h3>《封面留白的代价》</h3>
+            <p>封面构图第 43 期。主体缩到 38% 画面比例，评委意见分歧，最终以 0.5 分差落选。</p>
+            <span class="meta"><span class="badge">构图 86.5</span>11-01</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3 latest -->
+      <section class="panel" id="latest">
+        <span class="kicker">03 / 最新更新</span>
+        <h2>今日与本周的赛程变动</h2>
+        <p class="sub">只看日期和动作，不做评论。带“改”字的条目涉及规则或时间调整。</p>
+        <ul class="tight-list">
+          <li><time datetime="2026-11-08">11-08 09:00</time><span>第 46 期剪辑节奏开赛，命题卡放出，限制条件是三段变速、总时长 ≤90 秒、须含一次静音处理。</span><span class="who">主办方</span></li>
+          <li><time datetime="2026-11-08">11-08 07:40</time><span>改：本期提交截止从 11-09 05:00 提前到 11-09 03:00，原因写的是“服务器窗口与维护重叠”。</span><span class="who">赛务组</span></li>
+          <li><time datetime="2026-11-07">11-07 21:15</time><span>第 45 期分镜赛道成绩复核完毕，两份作品因提交版本号不符被降序，名单已更新。</span><span class="who">复核组</span></li>
+          <li><time datetime="2026-11-07">11-07 15:02</time><span>新增“复核回执”字段，选手可在作品页看到扣分项编号与对应细则条款。</span><span class="who">产品</span></li>
+          <li><time datetime="2026-11-06">11-06 18:30</time><span>第 44 期剪辑节奏的评分表公开，9 位评委中 2 位给出了低于均分 5 分以上的评分。</span><span class="who">评审组</span></li>
+          <li><time datetime="2026-11-05">11-05 10:10</time><span>配乐贴合预演赛报名关闭，共 61 人进入初筛，最终 18 人获得正式赛道资格。</span><span class="who">赛务组</span></li>
+        </ul>
+      </section>
+
+      <!-- 4 channels -->
+      <section class="panel" id="channels">
+        <span class="kicker">04 / 分类入口</span>
+        <h2>按用途找入口</h2>
+        <p class="sub">赛道名与工具名混排，点进去是对应细则或作品池，不是泛分类页。</p>
+        <ul class="tag-index">
+          <li><a href="/#deep">剪辑节奏评分细则</a></li>
+          <li><a href="/#deep">分镜叙事八格模板</a></li>
+          <li><a href="/#guide">48 小时交付时间表</a></li>
+          <li><a href="/#guide">提交版本号规范</a></li>
+          <li><a href="/#faq">复核回执怎么读</a></li>
+          <li><a href="/#latest">本期命题卡原文</a></li>
+          <li><a href="/#board">常设赛道积分榜</a></li>
+          <li><a href="/#comments">选手复盘笔记</a></li>
+          <li><a href="/#news">规则调整记录</a></li>
+          <li><a href="/#recommend">新手三件套</a></li>
+          <li><a href="/#overview">直播切片钩子清单</a></li>
+          <li><a href="/#picks">评委复核笔记合集</a></li>
+        </ul>
+      </section>
+
+      <!-- 5 deep dive -->
+      <section class="panel" id="deep">
+        <span class="kicker">05 / 深度解析</span>
+        <h2>为什么 0.2 秒的卡点误差会成为分水岭</h2>
+        <div class="analysis">
+          <article>
+            <p>第 44 期剪辑节奏的评分表里，前 12 名与 13–30 名的差距不在素材质量，而在卡点误差。前 12 名的平均误差是 0.11 秒，后一组是 0.27 秒；两组在“命题贴合”一项上的分差只有 1.6 分，在“执行精度”上却拉开 7.8 分。这说明限时命题下，评委更愿意为可测量的精度给分。</p>
+
+            <h3>从第 41 期到第 44 期：误差阈值被写进细则</h3>
+            <p>第 41 期细则只写“卡点贴合”，没有数字。当期冠军作品《鼓点之外》在第 22 秒有一处 0.35 秒的延迟，评委席三人给了通过，两人给了扣分，最终靠“叙事完整”补回。第 42 期起，细则加入“主要卡点误差 ≤0.2 秒”的硬条款，第 43 期又把“主要卡点”定义为“全片音量峰值前 0.5 秒内的切镜点”。到第 44 期，复核组开始逐点标注误差值，选手能在回执里看到 0.08、0.11、0.19 这样的数字。</p>
+            <p>这条线一旦量化，评分就从“感觉对不对”变成“数得出来”。第 44 期有两份作品素材明显更差，却因误差 0.09 秒和 0.10 秒进入前十；评委之一在复核笔记里写：“画面糊，但切点干净，我给了 89。”</p>
+
+            <h3>两位评委对同一份作品的分歧记录</h3>
+            <p>第 44 期作品《把倒计时藏进呼吸》，评委 A 给 96，评委 B 给 84。A 的理由是“换气声与切镜重合，属于高难度处理”；B 的理由是“第 47 秒到 52 秒连续五次切镜，观众来不及读画面”。两人的分歧不在误差，而在“切镜密度”。复核组最后取 90，并把“连续 5 秒内不超过 4 次切镜”写进第 46 期的建议项，但没写进硬性条款。</p>
+            <div class="pullquote">
+              “0.2 秒是门槛，不是目标。真正拉开名次的是门槛之内还愿意改几版。”
+              <cite>—— 第 44 期复核笔记，评审组，2026-11-06</cite>
+            </div>
+
+            <h3>可核对的三项判断</h3>
+            <table class="compare">
+              <caption>第 44 期剪辑节奏，按复核表整理</caption>
+              <tr><th>判断</th><th>核对依据</th><th>是否成立</th></tr>
+              <tr><td>误差越小名次越高</td><td>前 12 名平均 0.11 秒，13–30 名 0.27 秒</td><td>统计上成立，但第 7 名误差 0.19 秒高于第 9 名</td></tr>
+              <tr><td>素材质量决定上限</td><td>两组“命题贴合”分差 1.6 分</td><td>不成立，素材不是主要变量</td></tr>
+              <tr><td>切镜密度影响评分</td><td>评委 A/B 分歧条目，差 12 分</td><td>存在分歧，未入硬条款</td></tr>
+            </table>
+            <p>这里有个容易被忽略的细节：误差值由复核组人工标注，不同复核员对“峰值前 0.5 秒”的取舍有 ±0.03 秒的差异。第 44 期有 4 份作品的标注值在两名复核员之间不一致，最终取平均值。也就是说，0.19 秒和 0.21 秒在纸面上分属两个档，实际可能只是标注差。</p>
+          </article>
+          <aside class="factbox" aria-label="深度解析数据卡">
+            <h3>本期命题卡要素</h3>
+            <table>
+              <tr><td>期数</td><td>第 46 期</td></tr>
+              <tr><td>赛道</td><td>剪辑节奏</td></tr>
+              <tr><td>时长</td><td>60–90 秒</td></tr>
+              <tr><td>硬限制</td><td>三段变速 / 静音一次</td></tr>
+              <tr><td>开赛</td><td>11-08 09:00</td></tr>
+              <tr><td>截止</td><td>11-09 03:00</td></tr>
+              <tr><td>复核</td><td>11-11 前出回执</td></tr>
+            </table>
+          </aside>
+        </div>
+      </section>
+
+      <!-- 6 guide -->
+      <section class="panel" id="guide">
+        <span class="kicker">06 / 体验指南</span>
+        <h2>48 小时交付出片流程</h2>
+        <p class="sub">以第 46 期为例，时间从命题卡放出算起。每步都写了可核对的产出物。</p>
+        <ol class="steps">
+          <li><strong>读命题卡，先抄限制。</strong>三段变速、静音一次、时长上限 90 秒。把这三条写在工程文件首帧，避免剪完才发现违规。</li>
+          <li><strong>选素材，控制在 6 段以内。</strong>第 44 期前十名平均用 5.4 段素材，13–30 名平均 9.1 段。段数少，卡点更好对齐。</li>
+          <li><strong>标卡点，先粗后细。</strong>用波形图找峰值，把切镜点对齐到峰值前 0.5 秒内，再逐点微调到 0.2 秒以内。</li>
+          <li><strong>做静音段。</strong>本题要求一次静音处理，建议放在第 40–55 秒之间，给评审一个明确的“呼吸点”。</li>
+          <li><strong>导出并核对版本号。</strong>文件名格式为“期数-赛道-选手编号-v2”，v1 和 v2 只保留最终版。第 45 期有两份作品因版本号不符被降序。</li>
+          <li><strong>提交后看复核回执。</strong>回执含扣分项编号与细则条款，72 小时内可提一次异议，异议要附时间码。</li>
+        </ol>
+      </section>
+
+      <!-- 7 faq -->
+      <section class="panel" id="faq">
+        <span class="kicker">07 / 常见问题</span>
+        <h2>参赛与观赛的常见疑问</h2>
+        <details>
+          <summary>命题卡的“三段变速”具体指什么？</summary>
+          <p class="ans">成片里要有三处明显的速度变化，每处持续不少于 3 秒，且三处不能连续挨着。第 46 期复核组会按时间码逐段核对，变速幅度没有下限，但两段之间至少隔 8 秒。</p>
+        </details>
+        <details>
+          <summary>卡点误差 0.2 秒怎么测？自己测和复核测不一致怎么办？</summary>
+          <p class="ans">以全片音量峰值前 0.5 秒为参照，切镜点与参照点的差值即误差。自测可用波形图，复核用同一套标注流程。若差值在 0.03 秒内，复核组取两名复核员的平均值；超过 0.03 秒且选手有异议，可附时间码申诉。</p>
+        </details>
+        <details>
+          <summary>第 46 期为什么把截止时间提前两小时？</summary>
+          <p class="ans">赛务组 11-08 07:40 的公告写的是“服务器窗口与维护重叠”，提交截止改为 11-09 03:00。已提交作品不受影响，未提交的按新时间执行，不设补交。</p>
+        </details>
+        <details>
+          <summary>复核回执里的扣分项编号在哪查？</summary>
+          <p class="ans">作品页“复核”标签下有编号，编号对应细则条款，例如 R-03 指“卡点误差超阈值”。第 46 期起回执还附复核员代号，但不公开姓名。</p>
+        </details>
+        <details>
+          <summary>非专业剪辑能参加吗？</summary>
+          <p class="ans">能。第 45 期有 23% 的提交来自首次参赛者，其中 4 人进入前三十。门槛在细则，不在设备；手机剪辑的提交只要满足卡点与时长限制，评分口径一致。</p>
+        </details>
+      </section>
+
+      <!-- 8 comments -->
+      <section class="panel" id="comments">
+        <span class="kicker">08 / 用户评论</span>
+        <h2>选手与观众怎么说</h2>
+        <p class="sub">按提交时间排列，未做删改，仅隐藏个人信息。</p>
+        <div class="comments">
+          <div class="comment">
+            <header><span class="name">阿岫</span><span class="tag">分镜赛道</span><span class="time">11-07 22:10</span></header>
+            <p>《末班地铁的十七秒》第 4 格那根扶手确实省了一次切镜，但我更在意第 7 格的视线方向，跟第 5 格是反的。复核笔记没提这一点，有点可惜。</p>
+          </div>
+          <div class="comment">
+            <header><span class="name">剪辑老陈</span><span class="tag">剪辑节奏</span><span class="time">11-07 19:44</span></header>
+            <p>0.2 秒的门槛对手机剪辑不太友好。我用剪映做了一版，误差 0.24 秒，卡在门外。不是抱怨规则，是希望细则里给手机端一个说明。</p>
+          </div>
+          <div class="comment">
+            <header><span class="name">看客小满</span><span class="tag">观众</span><span class="time">11-07 16:02</span></header>
+            <p>只当观众。第 44 期那批作品我连着看了七遍，《把倒计时藏进呼吸》第 47 秒之后确实太快，评委 B 说得有道理。</p>
+          </div>
+          <div class="comment">
+            <header><span class="name">周程</span><span class="tag">标题赛道</span><span class="time">11-06 13:20</span></header>
+            <p>我那条被驳回的标题现在看确实信息太满。驳回理由写“信息密度超纲”，当时不服，复盘后服了一半——另一半还是觉得 18 字限制太紧。</p>
+          </div>
+          <div class="comment">
+            <header><span class="name">沉默的波形</span><span class="tag">配乐贴合</span><span class="time">11-06 09:15</span></header>
+            <p>配乐预演赛只有 18 人进正式赛道，比例 29.5%，比剪辑赛道低不少。不知道是不是评审人手不够，希望下期扩一点。</p>
+          </div>
+          <div class="comment">
+            <header><span class="name">林岫</span><span class="tag">第 45 期冠军</span><span class="time">11-05 21:37</span></header>
+            <p>分镜赛道拿第一那次，八格里有两格是废稿重画的。评审看的是镜头关系，不是画得细不细，这点第 45 期细则写得很清楚。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9 news -->
+      <section class="panel" id="news">
+        <span class="kicker">09 / 相关资讯</span>
+        <h2>规则与赛程的调整记录</h2>
+        <p class="sub">按时间倒序，只记已生效的变动。带“拟”字的尚未生效。</p>
+        <ul class="timeline">
+          <li>
+            <time datetime="2026-11-08">2026-11-08</time>
+            <p>第 46 期提交截止提前至 03:00，涉及全部赛道，已提交作品无需重交。</p>
+          </li>
+          <li>
+            <time datetime="2026-11-07">2026-11-07</time>
+            <p>复核回执新增扣分项编号与复核员代号，选手可在 72 小时内提一次异议。</p>
+          </li>
+          <li>
+            <time datetime="2026-11-06">2026-11-06</time>
+            <p>第 44 期评分表公开，9 位评委中 2 位给出低于均分 5 分以上的评分，差额已标注。</p>
+          </li>
+          <li>
+            <time datetime="2026-11-03">2026-11-03</time>
+            <p>拟：第 47 期起，直播切片赛道拟加入“前 3 秒无字幕”硬限制，仍在征求意见。</p>
+          </li>
+          <li>
+            <time datetime="2026-11-01">2026-11-01</time>
+            <p>封面构图赛道第 43 期复盘发布，主体占比低于 40% 的提交通过率 41%，高于 40% 的为 63%。</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 10 board -->
+      <section class="panel" id="board">
+        <span class="kicker">10 / 积分榜</span>
+        <h2>常设赛道近五期积分</h2>
+        <p class="sub">按单期名次折分累计，冠亚季分别为 10/8/6，第四至第十依次递减 1 分。同分看最近一期名次。</p>
+        <ol class="rank">
+          <li><span>沈屿 · 分镜叙事</span><span class="score">46</span></li>
+          <li><span>阿岫 · 剪辑节奏</span><span class="score">41</span></li>
+          <li><span>周程 · 标题文案</span><span class="score">38</span></li>
+          <li><span>沉默的波形 · 配乐贴合</span><span class="score">33</span></li>
+          <li><span>林岫 · 分镜叙事</span><span class="score">30</span></li>
+          <li><span>剪辑老陈 · 剪辑节奏</span><span class="score">27</span></li>
+          <li><span>封面社 · 封面构图</span><span class="score">24</span></li>
+        </ol>
+        <p class="sub">统计区间：第 41 期至第 45 期。第 46 期成绩未出，暂不计入。</p>
+      </section>
+
+      <!-- 11 recommend -->
+      <section class="panel" id="recommend">
+        <span class="kicker">11 / 相关推荐</span>
+        <h2>顺着这些词往下看</h2>
+        <p class="sub">标签即入口，对应作品池或细则页，没有内容的入口不放。</p>
+        <ul class="tag-index">
+          <li><a href="/#deep">剪辑卡点误差标准</a></li>
+          <li><a href="/#guide">第 46 期命题卡解读</a></li>
+          <li><a href="/#comments">分镜赛道选手复盘</a></li>
+          <li><a href="/#news">复核异议怎么写</a></li>
+          <li><a href="/#board">近五期积分算法</a></li>
+          <li><a href="/#latest">直播切片钩子模板</a></li>
+          <li><a href="/#faq">手机剪辑能参赛吗</a></li>
+          <li><a href="/#picks">评委复核笔记原文</a></li>
+        </ul>
+      </section>
+
+    </div><!-- /main-col -->
+
+    <aside aria-label="侧栏">
+      <div class="side-card">
+        <h2>栏目导航</h2>
+        <ul class="side-nav" id="sideNav">
+          <li><a href="/#overview">赛道概览</a></li>
+          <li><a href="/#picks">精选作品</a></li>
+          <li><a href="/#latest">今日更新</a></li>
+          <li><a href="/#channels">分类入口</a></li>
+          <li><a href="/#deep">赛制拆解</a></li>
+          <li><a href="/#guide">参赛指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#comments">用户评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#board">积分榜</a></li>
+          <li><a href="/#recommend">相关推荐</a></li>
+        </ul>
+      </div>
+      <div class="side-card">
+        <h2>本期进度</h2>
+        <ul class="side-list">
+          <li>开赛 <b>09:00</b> · 已过 <b>6h12m</b></li>
+          <li>已提交 <b>128</b> 份</li>
+          <li>初筛通过 <b>37</b> 份</li>
+          <li>复核排队 <b>12</b> 份</li>
+          <li>距截止 <b>11h48m</b></li>
+        </ul>
+      </div>
+      <div class="side-card">
+        <h2>快速核对</h2>
+        <ul class="side-list">
+          <li>时长上限 <b>90 秒</b></li>
+          <li>卡点误差 <b>≤0.2 秒</b></li>
+          <li>变速段数 <b>3</b></li>
+          <li>静音处理 <b>1 次</b></li>
+          <li>文件名 <b>v2 结尾</b></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+</div>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#e8c97a"/>
+            <path d="M14 46V18h6.5L32 36.5 43.5 18H50v28h-5.6V28.4L34.6 44h-5.2L19.6 28.4V46z" fill="#133b34"/>
+            <circle cx="49" cy="15" r="4.5" fill="#133b34"/>
+          </svg>
+          npxvip 每日大赛
+        </div>
+        <p>一天一题，48 小时交付，细则先行，名次可查。</p>
+        <p style="font-size:.8rem;color:#adafa1">本页条目为示例数据，选手名、作品名与分数均为演示内容，不对应真实赛事记录。</p>
+      </div>
+      <div>
+        <h3>赛道入口</h3>
+        <ul>
+          <li><a href="/#overview">剪辑节奏</a></li>
+          <li><a href="/#overview">分镜叙事</a></li>
+          <li><a href="/#overview">标题文案</a></li>
+          <li><a href="/#overview">配乐贴合</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>参赛相关</h3>
+        <ul>
+          <li><a href="/#guide">出片流程</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#news">规则调整</a></li>
+          <li><a href="/#board">积分榜</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>阅读入口</h3>
+        <ul>
+          <li><a href="/#deep">赛制拆解</a></li>
+          <li><a href="/#picks">精选作品</a></li>
+          <li><a href="/#comments">选手评论</a></li>
+          <li><a href="/#latest">今日更新</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-note">
+      <span>页面内容更新：2026-11-08 09:30，对应“第 46 期开赛”与“提交截止提前”两条公告。</span>
+      <span>© 2026 npxvip 每日大赛 · 示例站，内容仅作演示</span>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" type="button" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var menuBtn = document.getElementById('menuBtn');
+  var mainNav = document.getElementById('mainNav');
+  if(menuBtn && mainNav){
+    menuBtn.addEventListener('click', function(){
+      var open = mainNav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      menuBtn.textContent = open ? '关闭 ▴' : '导航 ▾';
+    });
+    mainNav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && window.innerWidth <= 800){
+        mainNav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+        menuBtn.textContent = '导航 ▾';
+      }
+    });
+  }
+
+  // search (local)
+  var input = document.getElementById('searchInput');
+  var btn = document.getElementById('searchBtn');
+  var msg = null;
+  function ensureMsg(){
+    if(!msg){
+      msg = document.createElement('div');
+      msg.className = 'search-msg';
+      msg.setAttribute('role','status');
+      msg.setAttribute('aria-live','polite');
+      input.parentNode.parentNode.appendChild(msg);
+    }
+    return msg;
+  }
+  function doSearch(){
+    var q = (input.value || '').trim().toLowerCase();
+    var m = ensureMsg();
+    if(!q){ m.textContent = ''; return; }
+    var targets = document.querySelectorAll('.main-col section');
+    var found = null;
+    for(var i=0;i<targets.length;i++){
+      if(targets[i].textContent.toLowerCase().indexOf(q) !== -1){
+        found = targets[i];
+        break;
+      }
+    }
+    if(found){
+      m.textContent = '已定位到：' + (found.querySelector('h2') ? found.querySelector('h2').textContent : found.id);
+      location.hash = '#' + found.id;
+    }else{
+      m.textContent = '没有找到与“' + input.value.trim() + '”相关的赛道或条目，试试“剪辑节奏”“复核回执”“积分榜”。';
+    }
+  }
+  if(btn){ btn.addEventListener('click', doSearch); }
+  if(input){
+    input.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ e.preventDefault(); doSearch(); } });
+  }
+
+  // scroll spy + to top
+  var links = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var sections = links.map(function(a){ return document.querySelector(a.getAttribute('href').replace('/#','#')); });
+  var toTop = document.getElementById('toTop');
+  function onScroll(){
+    var y = window.scrollY + 140;
+    var active = -1;
+    for(var i=0;i<sections.length;i++){
+      if(sections[i] && sections[i].offsetTop <= y){ active = i; }
+    }
+    links.forEach(function(a, i){ a.classList.toggle('active', i === active); });
+    if(toTop){
+      if(window.scrollY > 600){ toTop.classList.add('show'); }
+      else{ toTop.classList.remove('show'); }
+    }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('load', onScroll);
+  onScroll();
+  if(toTop){
+    toTop.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  }
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"npxvip 每日大赛",
+  "description":"每日命题、48 小时交付的创作赛事，收录赛程、作品与评分细则。",
+  "inLanguage":"zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"命题卡的“三段变速”具体指什么？",
+      "acceptedAnswer":{"@type":"Answer","text":"成片里要有三处明显的速度变化，每处持续不少于 3 秒，且三处不能连续挨着，两段之间至少隔 8 秒。"}
+    },
+    {
+      "@type":"Question",
+      "name":"卡点误差 0.2 秒怎么测？",
+      "acceptedAnswer":{"@type":"Answer","text":"以全片音量峰值前 0.5 秒为参照，切镜点与参照点的差值即误差；复核取两名复核员平均值，差值超过 0.03 秒可附时间码申诉。"}
+    },
+    {
+      "@type":"Question",
+      "name":"第 46 期为什么把截止时间提前两小时？",
+      "acceptedAnswer":{"@type":"Answer","text":"赛务组 11-08 07:40 公告称服务器窗口与维护重叠，提交截止改为 11-09 03:00，已提交作品不受影响。"}
+    },
+    {
+      "@type":"Question",
+      "name":"复核回执里的扣分项编号在哪查？",
+      "acceptedAnswer":{"@type":"Answer","text":"作品页复核标签下有编号，对应细则条款，例如 R-03 指卡点误差超阈值；第 46 期起还附复核员代号。"}
+    },
+    {
+      "@type":"Question",
+      "name":"非专业剪辑能参加吗？",
+      "acceptedAnswer":{"@type":"Answer","text":"能。第 45 期有 23% 的提交来自首次参赛者，其中 4 人进入前三十；评分口径对设备不做区分。"}
+    }
+  ]
+}
+</script>
+</body>
+  </html>
