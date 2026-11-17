@@ -1,0 +1,1439 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>黑椒盖饭楠楠御姐糖心-内容导航与深度观察</title>
+<meta name="description" content="黑椒盖饭楠楠御姐糖心是集内容导航、深度解析与体验指南于一体的观察站，梳理2026年11月各平台更新、创作者动态与争议回应，提供可核对的榜单、FAQ与推荐标签。">
+<meta name="keywords" content="黑椒盖饭楠楠御姐糖心">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232b1a10'/%3E%3Ccircle cx='26' cy='30' r='12' fill='%23e8a33d'/%3E%3Ccircle cx='44' cy='36' r='9' fill='%23c0492b'/%3E%3Cpath d='M18 46h30' stroke='%23f5e6c8' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#241a12;
+  --ink-soft:#4a3a2c;
+  --muted:#7a6857;
+  --paper:#fbf5ea;
+  --paper-2:#f4e9d6;
+  --card:#fffdf8;
+  --line:#e2d3ba;
+  --line-strong:#cdb896;
+  --pepper:#c0492b;
+  --pepper-deep:#8f3218;
+  --gold:#d9971f;
+  --gold-soft:#f3dfae;
+  --plum:#6b3e52;
+  --green:#4d6b45;
+  --radius-s:8px;
+  --radius-m:14px;
+  --radius-l:22px;
+  --shadow-s:0 1px 2px rgba(60,40,20,.06),0 2px 8px rgba(60,40,20,.05);
+  --shadow-m:0 4px 14px rgba(60,40,20,.08);
+  --gap:clamp(14px,2.2vw,26px);
+  --maxw:1180px;
+  --font:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --font-serif:"Noto Serif SC","Songti SC","SimSun",serif;
+  --sticky-h:104px;
+  --announce-h:38px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation:none!important;transition:none!important}
+}
+body{
+  margin:0;
+  font-family:var(--font);
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.78;
+  font-size:16px;
+  -webkit-text-size-adjust:100%;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:var(--pepper-deep);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700}
+p{margin:0 0 .9em}
+ul,ol{margin:0 0 .9em;padding-left:1.3em}
+li{margin-bottom:.35em}
+:focus-visible{outline:3px solid var(--pepper);outline-offset:2px;border-radius:4px}
+
+/* ---------- 吸顶容器 ---------- */
+.sticky-wrap{
+  position:sticky;top:0;z-index:60;
+}
+.announce{
+  background:linear-gradient(90deg,var(--pepper-deep),var(--pepper) 55%,#a83a1d);
+  color:#fff5e8;
+  font-size:13.5px;
+  letter-spacing:.01em;
+}
+.announce .inner{
+  max-width:var(--maxw);margin:0 auto;padding:8px 18px;
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+}
+.announce .tag{
+  background:#fff5e8;color:var(--pepper-deep);
+  font-weight:700;border-radius:99px;padding:1px 9px;font-size:12px;white-space:nowrap;
+}
+.announce a{color:#fff;text-decoration:underline;text-underline-offset:2px;white-space:nowrap}
+.announce .clock{margin-left:auto;opacity:.8;font-size:12.5px;white-space:nowrap}
+
+.site-header{
+  background:rgba(251,245,234,.96);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+  box-shadow:var(--shadow-s);
+}
+.header-inner{
+  max-width:var(--maxw);margin:0 auto;padding:10px 18px;
+  display:flex;align-items:center;gap:18px;
+}
+.brand{
+  display:flex;align-items:center;gap:10px;flex:none;
+}
+.brand svg{flex:none}
+.brand-text{display:flex;flex-direction:column;line-height:1.18}
+.brand-text .cn{font-size:17px;font-weight:800;letter-spacing:.02em;color:var(--ink)}
+.brand-text .en{font-size:10.5px;color:var(--muted);letter-spacing:.16em;text-transform:uppercase}
+.main-nav{margin-left:auto;display:flex;align-items:center;gap:2px;flex-wrap:wrap}
+.main-nav a{
+  display:inline-block;padding:7px 10px;border-radius:99px;
+  color:var(--ink-soft);font-size:14px;font-weight:500;
+}
+.main-nav a:hover{background:var(--paper-2);text-decoration:none;color:var(--pepper-deep)}
+.main-nav a.active{background:var(--gold-soft);color:var(--pepper-deep);font-weight:700}
+.search-box{
+  display:flex;align-items:center;gap:6px;flex:none;
+  background:#fff;border:1px solid var(--line-strong);border-radius:99px;
+  padding:3px 4px 3px 12px;
+}
+.search-box input{
+  border:none;background:transparent;font-family:inherit;font-size:13.5px;
+  width:138px;color:var(--ink);padding:5px 0;
+}
+.search-box input:focus{outline:none}
+.search-box button{
+  border:none;background:var(--pepper);color:#fff;border-radius:99px;
+  padding:6px 13px;font-family:inherit;font-size:13px;cursor:pointer;font-weight:600;
+}
+.search-box button:hover{background:var(--pepper-deep)}
+.menu-btn{
+  display:none;border:1px solid var(--line-strong);background:#fff;
+  border-radius:10px;padding:7px 11px;font-family:inherit;font-size:14px;
+  color:var(--ink);cursor:pointer;align-items:center;gap:6px;
+}
+.search-feedback{
+  display:none;font-size:12.5px;color:var(--pepper-deep);
+  background:var(--gold-soft);border-radius:8px;padding:4px 10px;
+}
+.search-feedback.show{display:inline-block}
+
+/* ---------- 锚点偏移 ---------- */
+[id]{scroll-margin-top:calc(var(--sticky-h) + var(--announce-h) + 12px)}
+section.block{scroll-margin-top:calc(var(--sticky-h) + var(--announce-h) + 12px)}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(900px 340px at 82% -10%,rgba(217,151,31,.20),transparent 62%),
+    radial-gradient(700px 300px at 6% 108%,rgba(192,73,43,.14),transparent 60%),
+    linear-gradient(180deg,#fdf8ee,#f6ecda);
+  border-bottom:1px solid var(--line);
+}
+.hero-inner{
+  max-width:var(--maxw);margin:0 auto;padding:clamp(28px,5vw,64px) 18px clamp(26px,4vw,52px);
+  display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);
+  gap:clamp(20px,4vw,52px);align-items:center;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--pepper-deep);
+  background:rgba(255,255,255,.72);border:1px solid var(--line-strong);
+  border-radius:99px;padding:4px 14px;margin-bottom:16px;
+}
+.hero-eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--pepper)}
+.hero h1{
+  font-family:var(--font-serif);
+  font-size:clamp(28px,4.6vw,50px);
+  letter-spacing:.01em;color:var(--ink);
+  margin-bottom:18px;
+}
+.hero h1 .accent{
+  background:linear-gradient(180deg,transparent 62%,rgba(217,151,31,.5) 62%);
+  padding:0 2px;
+}
+.hero-desc{
+  font-size:clamp(15px,1.5vw,16.5px);color:var(--ink-soft);max-width:34em;
+  margin-bottom:22px;
+}
+.hero-desc b{color:var(--pepper-deep)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:26px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  border-radius:99px;padding:10px 22px;font-size:15px;font-weight:700;
+  border:1px solid transparent;transition:transform .18s ease,box-shadow .18s ease,background .18s ease;
+}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-primary{background:var(--pepper);color:#fff;box-shadow:0 6px 16px rgba(192,73,43,.28)}
+.btn-primary:hover{background:var(--pepper-deep);color:#fff}
+.btn-ghost{background:rgba(255,255,255,.8);color:var(--ink);border-color:var(--line-strong)}
+.btn-ghost:hover{color:var(--pepper-deep);border-color:var(--pepper)}
+.hero-stats{
+  display:flex;flex-wrap:wrap;gap:clamp(14px,3vw,34px);
+  padding-top:18px;border-top:1px dashed var(--line-strong);max-width:36em;
+}
+.hero-stats div{line-height:1.3}
+.hero-stats .num{
+  font-family:var(--font-serif);font-size:clamp(20px,2.4vw,27px);font-weight:700;color:var(--pepper-deep);
+  display:block;
+}
+.hero-stats .lab{font-size:12.5px;color:var(--muted);letter-spacing:.03em}
+
+/* 首屏原创视觉 */
+.hero-art{position:relative;min-height:300px;display:flex;align-items:center;justify-content:center}
+.hero-art svg{width:100%;height:auto;max-width:430px;display:block;filter:drop-shadow(0 18px 26px rgba(90,58,26,.14))}
+.art-caption{
+  position:absolute;left:50%;transform:translateX(-50%);bottom:-6px;
+  font-size:11.5px;letter-spacing:.18em;color:var(--muted);white-space:nowrap;
+  background:rgba(251,245,234,.86);padding:2px 12px;border-radius:99px;border:1px solid var(--line);
+}
+
+/* ---------- 布局 ---------- */
+.layout{
+  max-width:var(--maxw);margin:0 auto;padding:clamp(24px,4vw,48px) 18px clamp(30px,5vw,64px);
+  display:grid;grid-template-columns:minmax(0,1fr) 306px;
+  gap:clamp(20px,3.4vw,44px);align-items:start;
+}
+.main-col{min-width:0}
+.side-col{min-width:0;position:sticky;top:calc(var(--sticky-h) + var(--announce-h) + 16px)}
+
+/* 板块通用 */
+.block{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-l);padding:clamp(18px,2.6vw,30px);margin-bottom:clamp(18px,2.6vw,30px);box-shadow:var(--shadow-s)}
+.block-head{margin-bottom:16px}
+.kicker{
+  display:block;font-size:12.5px;font-weight:700;letter-spacing:.12em;
+  color:var(--pepper);text-transform:uppercase;margin-bottom:6px;
+}
+.block-head h2{
+  font-family:var(--font-serif);font-size:clamp(20px,2.4vw,26px);color:var(--ink);
+  display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;
+}
+.block-head h2 .idx{
+  font-family:var(--font);font-size:12px;font-weight:700;color:var(--gold);
+  border:1px solid var(--gold);border-radius:6px;padding:1px 7px;letter-spacing:.05em;
+  position:relative;top:-2px;
+}
+.block-head .sub{font-size:14px;color:var(--muted);margin-top:6px}
+.block-head h3{font-size:16.5px;color:var(--ink);margin:0 0 6px}
+
+/* ---------- 1 领域概览 ---------- */
+.overview-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap)}
+.ov-card{
+  border:1px solid var(--line);border-radius:var(--radius-m);padding:15px 16px;
+  background:linear-gradient(180deg,#fffdf8,#fbf3e4);
+}
+.ov-card .ov-top{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.ov-card .ov-ico{
+  width:30px;height:30px;border-radius:9px;display:grid;place-items:center;flex:none;
+  background:var(--gold-soft);color:var(--pepper-deep);
+  font-family:var(--font-serif);font-weight:700;font-size:14px;
+}
+.ov-card h3{font-size:15.5px;margin:0}
+.ov-card p{font-size:13.5px;color:var(--ink-soft);margin:0}
+.ov-card .meta{font-size:12px;color:var(--muted);margin-top:8px;display:block}
+
+/* ---------- 2 精选推荐 ---------- */
+.feature-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:var(--gap)}
+.feature-lead{
+  position:relative;border-radius:var(--radius-m);overflow:hidden;
+  border:1px solid var(--line);background:#1f1610;color:#f7eddd;
+  display:flex;flex-direction:column;justify-content:flex-end;min-height:300px;
+}
+.feature-lead img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.62}
+.feature-lead .fl-body{position:relative;padding:20px}
+.feature-lead h3{font-family:var(--font-serif);font-size:clamp(18px,2vw,23px);color:#fff;margin-bottom:8px}
+.feature-lead p{font-size:13.5px;color:#eadfcd;margin-bottom:10px}
+.pill{
+  display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.04em;
+  background:rgba(217,151,31,.92);color:#3a2410;border-radius:99px;padding:2px 10px;
+}
+.feature-side{display:grid;gap:var(--gap)}
+.fs-card{
+  display:flex;gap:13px;border:1px solid var(--line);border-radius:var(--radius-m);
+  padding:12px;background:#fffdf8;transition:transform .18s ease,box-shadow .18s ease;
+}
+.fs-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-m)}
+.fs-card img{width:88px;height:88px;border-radius:10px;object-fit:cover;flex:none;background:var(--paper-2)}
+.fs-card .fs-txt{min-width:0}
+.fs-card h3{font-size:15px;margin-bottom:4px}
+.fs-card p{font-size:12.8px;color:var(--muted);margin:0}
+
+/* ---------- 3 最新更新 ---------- */
+.update-list{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+.update-list li{
+  display:grid;grid-template-columns:78px minmax(0,1fr);gap:14px;
+  padding:13px 0;border-bottom:1px solid var(--line);margin:0;
+}
+.update-list .date{
+  font-size:12.5px;font-weight:700;color:var(--pepper-deep);
+  font-variant-numeric:tabular-nums;padding-top:2px;
+}
+.update-list .u-txt{font-size:14px;color:var(--ink-soft)}
+.update-list .u-txt strong{color:var(--ink)}
+.update-list .u-txt .src{font-size:12px;color:var(--muted);display:block;margin-top:3px}
+
+/* ---------- 4 分类入口 ---------- */
+.cat-tags{display:flex;flex-wrap:wrap;gap:10px}
+.cat-tag{
+  display:inline-flex;align-items:center;gap:7px;
+  border:1px solid var(--line-strong);background:#fff;border-radius:99px;
+  padding:7px 15px;font-size:14px;color:var(--ink);transition:all .16s ease;
+}
+.cat-tag .n{font-size:11.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.cat-tag:hover{background:var(--pepper);border-color:var(--pepper);color:#fff;text-decoration:none;transform:translateY(-2px)}
+.cat-tag:hover .n{color:#ffe6d2}
+
+/* ---------- 5 深度解析 ---------- */
+.essay{font-size:15.5px;color:var(--ink-soft)}
+.essay h3{font-family:var(--font-serif);font-size:18.5px;color:var(--ink);margin:24px 0 10px;padding-left:12px;border-left:4px solid var(--pepper)}
+.essay h3:first-of-type{margin-top:6px}
+.essay p{margin-bottom:1em}
+.essay .lead{font-size:16.5px;color:var(--ink)}
+.judge-box{
+  border:1px solid var(--gold);background:linear-gradient(180deg,#fffaf0,#fdf3df);
+  border-radius:var(--radius-m);padding:16px 18px;margin:18px 0;
+}
+.judge-box .jt{font-weight:800;color:var(--pepper-deep);font-size:14px;letter-spacing:.04em;display:block;margin-bottom:6px}
+.judge-box p{margin:0;font-size:14.5px}
+.check-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px}
+.check-table th,.check-table td{border:1px solid var(--line-strong);padding:8px 10px;text-align:left;vertical-align:top}
+.check-table th{background:var(--paper-2);font-weight:700;color:var(--ink);white-space:nowrap}
+.check-table td{color:var(--ink-soft)}
+.quote-card{
+  border-left:4px solid var(--plum);background:#faf3f6;border-radius:0 var(--radius-m) var(--radius-m) 0;
+  padding:14px 18px;margin:18px 0;color:var(--plum);font-family:var(--font-serif);
+  font-size:15.5px;line-height:1.8;
+}
+.quote-card .attr{display:block;font-family:var(--font);font-size:12.5px;color:var(--muted);margin-top:6px}
+
+/* ---------- 6 体验指南 步骤 ---------- */
+.steps{list-style:none;padding:0;margin:0;counter-reset:st}
+.steps li{
+  position:relative;padding:0 0 20px 52px;counter-increment:st;margin:0;
+  border-left:2px dashed var(--line-strong);margin-left:16px;
+}
+.steps li:last-child{border-left-color:transparent;padding-bottom:0}
+.steps li::before{
+  content:counter(st);
+  position:absolute;left:-17px;top:0;width:32px;height:32px;border-radius:50%;
+  background:var(--pepper);color:#fff;display:grid;place-items:center;
+  font-weight:800;font-size:14px;box-shadow:0 0 0 4px var(--card);
+}
+.steps h3{font-size:15.5px;margin-bottom:4px}
+.steps p{font-size:13.8px;color:var(--ink-soft);margin:0}
+.steps .note{color:var(--pepper-deep);font-weight:600}
+
+/* ---------- 7 FAQ ---------- */
+.faq details{
+  border:1px solid var(--line);border-radius:var(--radius-m);
+  background:#fffdf8;margin-bottom:10px;overflow:hidden;
+}
+.faq details[open]{border-color:var(--line-strong);box-shadow:var(--shadow-s)}
+.faq summary{
+  cursor:pointer;padding:13px 46px 13px 16px;font-weight:700;font-size:15px;
+  color:var(--ink);position:relative;list-style:none;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);
+  font-size:20px;font-weight:400;color:var(--pepper);line-height:1;
+}
+.faq details[open] summary::after{content:"–"}
+.faq .ans{padding:0 16px 15px;font-size:14px;color:var(--ink-soft);border-top:1px dashed var(--line);padding-top:12px}
+.faq .ans p{margin-bottom:.7em}
+
+/* ---------- 8 用户评论 ---------- */
+.comments{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--gap)}
+.cmt{
+  border:1px solid var(--line);border-radius:var(--radius-m);padding:14px 16px;background:#fffdf8;
+}
+.cmt .who{display:flex;align-items:center;gap:9px;margin-bottom:7px}
+.cmt .ava{
+  width:32px;height:32px;border-radius:50%;flex:none;display:grid;place-items:center;
+  background:var(--gold-soft);color:var(--pepper-deep);font-weight:800;font-size:13px;
+  font-family:var(--font-serif);
+}
+.cmt .who b{font-size:13.8px}
+.cmt .who .t{font-size:11.5px;color:var(--muted);margin-left:auto;white-space:nowrap}
+.cmt p{font-size:13.8px;margin:0;color:var(--ink-soft)}
+.cmt .ref{display:inline-block;font-size:11.5px;color:var(--pepper-deep);background:var(--gold-soft);border-radius:5px;padding:0 6px;margin-top:6px}
+.cmt.dim{background:#f7f0e4;border-style:dashed}
+
+/* ---------- 9 相关资讯 ---------- */
+.news-list{list-style:none;padding:0;margin:0}
+.news-list li{
+  display:flex;gap:12px;align-items:baseline;padding:10px 0;border-bottom:1px dashed var(--line);margin:0;
+}
+.news-list li:last-child{border-bottom:none}
+.news-list .nb{
+  flex:none;font-size:11.5px;font-weight:700;color:var(--pepper-deep);
+  background:var(--paper-2);border-radius:5px;padding:1px 7px;
+}
+.news-list .nt{font-size:14px;color:var(--ink-soft)}
+.news-list .nt strong{color:var(--ink)}
+.news-list .nd{font-size:12px;color:var(--muted);margin-left:auto;white-space:nowrap;font-variant-numeric:tabular-nums}
+
+/* ---------- 10 相关推荐 标签索引 ---------- */
+.reco-tags{display:flex;flex-wrap:wrap;gap:9px}
+.reco-tag{
+  font-size:13.5px;padding:6px 14px;border-radius:var(--radius-s);
+  background:var(--paper-2);color:var(--ink-soft);border:1px solid var(--line);
+}
+.reco-tag:hover{background:var(--gold-soft);color:var(--pepper-deep);text-decoration:none;border-color:var(--gold)}
+
+/* ---------- 11 榜单 ---------- */
+.rank-list{list-style:none;padding:0;margin:0;counter-reset:rk}
+.rank-list li{
+  display:grid;grid-template-columns:34px minmax(0,1fr) 84px;gap:12px;align-items:center;
+  padding:11px 0;border-bottom:1px solid var(--line);margin:0;counter-increment:rk;
+}
+.rank-list li:last-child{border-bottom:none}
+.rank-list .rk{
+  width:28px;height:28px;border-radius:8px;display:grid;place-items:center;
+  font-weight:800;font-size:13px;background:var(--paper-2);color:var(--ink-soft);
+  font-variant-numeric:tabular-nums;
+}
+.rank-list li:nth-child(1) .rk{background:var(--pepper);color:#fff}
+.rank-list li:nth-child(2) .rk{background:var(--gold);color:#3a2410}
+.rank-list li:nth-child(3) .rk{background:var(--plum);color:#fff}
+.rank-list .rt{font-size:14.3px}
+.rank-list .rt b{display:block;font-size:14.5px;color:var(--ink)}
+.rank-list .rt span{font-size:12.3px;color:var(--muted)}
+.rank-list .bar{
+  height:7px;border-radius:99px;background:var(--paper-2);overflow:hidden;
+}
+.rank-list .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--gold),var(--pepper));border-radius:99px}
+
+/* ---------- 时间线 ---------- */
+.timeline{list-style:none;padding:0;margin:0}
+.timeline li{
+  position:relative;padding:0 0 16px 24px;border-left:2px solid var(--line-strong);margin:0 0 0 6px;
+}
+.timeline li:last-child{border-left-color:transparent;padding-bottom:0}
+.timeline li::before{
+  content:"";position:absolute;left:-6px;top:6px;width:10px;height:10px;border-radius:50%;
+  background:var(--pepper);box-shadow:0 0 0 3px var(--card);
+}
+.timeline .tm{font-size:12px;font-weight:700;color:var(--pepper-deep);font-variant-numeric:tabular-nums}
+.timeline .tx{font-size:13.8px;color:var(--ink-soft)}
+
+/* ---------- 侧栏 ---------- */
+.side-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius-l);
+  padding:16px 18px;margin-bottom:var(--gap);box-shadow:var(--shadow-s);
+}
+.side-card h2{
+  font-size:15px;margin-bottom:11px;font-family:var(--font-serif);
+  display:flex;align-items:center;gap:8px;
+}
+.side-card h2::before{content:"";width:4px;height:15px;border-radius:2px;background:var(--pepper)}
+.side-nav{list-style:none;padding:0;margin:0;font-size:13.8px}
+.side-nav li{margin:0}
+.side-nav a{
+  display:block;padding:6px 10px;border-radius:8px;color:var(--ink-soft);
+  border-left:3px solid transparent;transition:all .15s ease;
+}
+.side-nav a:hover{background:var(--paper-2);text-decoration:none;color:var(--pepper-deep)}
+.side-nav a.active{background:var(--gold-soft);color:var(--pepper-deep);font-weight:700;border-left-color:var(--pepper)}
+.side-note{font-size:12.5px;color:var(--muted);line-height:1.7}
+.side-note b{color:var(--ink-soft)}
+.side-hot{list-style:none;padding:0;margin:0;font-size:13.5px}
+.side-hot li{display:flex;gap:8px;padding:7px 0;border-bottom:1px dashed var(--line);margin:0}
+.side-hot li:last-child{border-bottom:none}
+.side-hot .h-n{font-weight:800;color:var(--gold);font-size:12.5px;flex:none;width:16px}
+.side-hot a{color:var(--ink-soft)}
+.side-hot a:hover{color:var(--pepper-deep)}
+.side-cta{
+  background:linear-gradient(160deg,var(--pepper-deep),var(--pepper));color:#fff5e8;
+  border-radius:var(--radius-l);padding:18px;border:none;
+}
+.side-cta h2{color:#fff}
+.side-cta h2::before{background:var(--gold)}
+.side-cta p{font-size:13px;color:#f7ded1;margin-bottom:12px}
+.side-cta .btn{background:#fff5e8;color:var(--pepper-deep);padding:8px 18px;font-size:13.5px;width:100%;justify-content:center}
+.side-cta .btn:hover{background:#fff;color:var(--pepper-deep)}
+
+/* ---------- 页尾 ---------- */
+.site-footer{
+  background:#221812;color:#d9c9b6;margin-top:clamp(20px,4vw,40px);
+  border-top:4px solid var(--pepper);
+}
+.footer-inner{
+  max-width:var(--maxw);margin:0 auto;padding:clamp(28px,4vw,48px) 18px 18px;
+}
+.footer-top{
+  display:grid;grid-template-columns:1.25fr 2fr;gap:clamp(22px,4vw,48px);
+  padding-bottom:26px;border-bottom:1px solid #3b2b20;
+}
+.footer-brand{display:flex;align-items:center;gap:11px;margin-bottom:12px}
+.footer-brand .cn{font-size:17px;font-weight:800;color:#fff2e0}
+.footer-brand .en{display:block;font-size:10px;letter-spacing:.18em;color:#a1887a;text-transform:uppercase}
+.footer-pos{font-size:13.5px;color:#b8a695;max-width:26em;line-height:1.75}
+.footer-groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.footer-groups h3{font-size:13px;color:var(--gold);letter-spacing:.08em;margin-bottom:9px;font-weight:700}
+.footer-groups ul{list-style:none;padding:0;margin:0}
+.footer-groups li{margin-bottom:6px}
+.footer-groups a{color:#c9b8a6;font-size:13px}
+.footer-groups a:hover{color:#fff;text-decoration:none}
+.footer-meta{
+  display:flex;flex-wrap:wrap;gap:8px 22px;padding:16px 0 6px;
+  font-size:12px;color:#9c897a;
+}
+.footer-meta b{color:#c9b8a6;font-weight:600}
+.footer-bottom{
+  display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between;
+  padding-top:12px;border-top:1px solid #3b2b20;font-size:12px;color:#8e7c6e;
+}
+
+/* ---------- 回到顶部 ---------- */
+.to-top{
+  position:fixed;right:18px;bottom:18px;z-index:70;
+  width:44px;height:44px;border-radius:50%;border:1px solid var(--line-strong);
+  background:var(--card);color:var(--pepper-deep);font-size:18px;cursor:pointer;
+  box-shadow:var(--shadow-m);display:grid;place-items:center;
+  opacity:0;visibility:hidden;transform:translateY(8px);transition:all .22s ease;
+}
+.to-top.show{opacity:1;visibility:visible;transform:translateY(0)}
+.to-top:hover{background:var(--gold-soft)}
+.to-top:focus-visible{outline:3px solid var(--pepper)}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:980px){
+  .hero-inner{grid-template-columns:1fr;gap:24px}
+  .hero-art{order:-1;min-height:auto;max-width:420px;margin:0 auto}
+  .art-caption{display:none}
+  .layout{grid-template-columns:1fr}
+  .side-col{position:static;order:2}
+  .main-col{order:1}
+  .overview-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .feature-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr;gap:26px}
+  .footer-groups{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .main-nav{order:3;width:100%;margin-left:0;justify-content:flex-start;display:none;padding-top:6px;border-top:1px solid var(--line);margin-top:8px}
+  .main-nav.open{display:flex}
+  .menu-btn{display:inline-flex;margin-left:auto}
+  .search-box{order:2;margin-left:0}
+  .header-inner{flex-wrap:wrap;row-gap:8px}
+}
+@media (max-width:700px){
+  :root{--sticky-h:100px}
+  .hero-inner{padding-top:22px}
+  .hero h1{font-size:clamp(24px,7vw,34px)}
+  .hero-stats{gap:18px 24px}
+  .comments{grid-template-columns:1fr}
+  .overview-grid{grid-template-columns:1fr}
+  .update-list li{grid-template-columns:64px minmax(0,1fr);gap:10px}
+  .search-box input{width:100px}
+  .footer-groups{grid-template-columns:1fr 1fr}
+  .announce .clock{display:none}
+  .rank-list li{grid-template-columns:30px minmax(0,1fr)}
+  .rank-list .bar{display:none}
+  .fs-card img{width:72px;height:72px}
+  .feature-lead{min-height:260px}
+}
+@media (max-width:400px){
+  .search-box{order:4;width:100%}
+  .search-box input{width:100%}
+  .search-box #searchBtn{flex:none}
+  .brand-text .cn{font-size:15.5px}
+  .cat-tag{font-size:13px;padding:6px 11px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-wrap">
+  <div class="announce" role="region" aria-label="站内更新公告">
+    <div class="inner">
+      <span class="tag">更新</span>
+      <span>11月7日新增「黑椒盖饭」糖心流心配比实测 3 组数据；楠楠御姐 11月5日直播回放已归档。</span>
+      <a href="/#updates">查看全部 12 条 →</a>
+      <span class="clock">数据截止 2026-11-08 09:30</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/#top" aria-label="返回顶部">
+        <svg width="38" height="38" viewBox="0 0 64 64" role="img" aria-label="黑椒盖饭标识图形">
+          <defs>
+            <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#2b1a10"/>
+              <stop offset="1" stop-color="#4a2f1c"/>
+            </linearGradient>
+          </defs>
+          <rect width="64" height="64" rx="16" fill="url(#bg1)"/>
+          <ellipse cx="32" cy="42" rx="19" ry="11" fill="#f5e6c8"/>
+          <ellipse cx="32" cy="39" rx="15" ry="8" fill="#fffdf5"/>
+          <circle cx="27" cy="36" r="2.1" fill="#c0492b"/>
+          <circle cx="35" cy="34" r="1.7" fill="#c0492b"/>
+          <circle cx="31" cy="42" r="1.6" fill="#8f3218"/>
+          <circle cx="38" cy="41" r="1.4" fill="#8f3218"/>
+          <circle cx="25" cy="41" r="1.3" fill="#8f3218"/>
+          <ellipse cx="32" cy="32" rx="8.5" ry="5.6" fill="#e8a33d"/>
+          <ellipse cx="32" cy="31" rx="6" ry="3.6" fill="#f7d27e"/>
+          <path d="M19 25c4-4 22-4 26 0" stroke="#d9c9b6" stroke-width="2" fill="none" stroke-linecap="round" opacity=".7"/>
+          <path d="M22 21c3-3 17-3 20 0" stroke="#d9c9b6" stroke-width="1.6" fill="none" stroke-linecap="round" opacity=".45"/>
+        </svg>
+        <span class="brand-text">
+          <span class="cn">黑椒盖饭楠楠御姐糖心</span>
+          <span class="en">Pepper Bowl · Index</span>
+        </span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-controls="mainNav" aria-expanded="false" type="button">
+        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        栏目
+      </button>
+
+      <nav class="main-nav" id="mainNav" aria-label="主题导航">
+        <a href="/#overview">领域概览</a>
+        <a href="/#picks">精选内容</a>
+        <a href="/#updates">最新更新</a>
+        <a href="/#categories">分类入口</a>
+        <a href="/#deepdive">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问题</a>
+      </nav>
+
+      <form class="search-box" id="searchForm" role="search" aria-label="站内搜索">
+        <input type="search" id="searchInput" placeholder="搜糖心、黑椒配比…" aria-label="输入关键词搜索本站内容" autocomplete="off">
+        <button type="submit" id="searchBtn">查找</button>
+      </form>
+      <span class="search-feedback" id="searchFeedback" role="status" aria-live="polite"></span>
+    </div>
+  </header>
+</div>
+
+<!-- ============ 首屏 ============ -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <span class="hero-eyebrow"><span class="dot"></span>2026 年 11 月 · 内容索引第 47 期</span>
+      <h1>黑椒盖饭楠楠御姐糖心</h1>
+      <p class="hero-desc">从<b>黑椒酱汁配比</b>到<b>糖心蛋火候</b>，从楠楠的盖饭测评到御姐风的吃播切片，把 2026 年 10 月至 11 月散落在各平台的菜谱、直播回放与争议讨论整理成一份能照着做、也能拿去核对的索引。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/#deepdive">读深度解析 →</a>
+        <a class="btn btn-ghost" href="/#updates">看本周更新</a>
+      </div>
+      <div class="hero-stats">
+        <div><span class="num">36</span><span class="lab">条菜谱实测记录</span></div>
+        <div><span class="num">11</span><span class="lab">个内容板块</span></div>
+        <div><span class="num">14</span><span class="lab">位创作者动态</span></div>
+        <div><span class="num">2026.11.08</span><span class="lab">索引更新日期</span></div>
+      </div>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 420 360" role="img">
+        <defs>
+          <linearGradient id="bowl" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#fffdf6"/>
+            <stop offset="1" stop-color="#e8dcc4"/>
+          </linearGradient>
+          <linearGradient id="sauce" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#3a2410"/>
+            <stop offset="1" stop-color="#7a3f1c"/>
+          </linearGradient>
+          <radialGradient id="yolk" cx="40%" cy="36%" r="70%">
+            <stop offset="0" stop-color="#ffe9a8"/>
+            <stop offset="55%" stop-color="#f2b53c"/>
+            <stop offset="100%" stop-color="#d98a17"/>
+          </radialGradient>
+          <linearGradient id="riceg" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ffffff"/>
+            <stop offset="1" stop-color="#f2e7d2"/>
+          </linearGradient>
+        </defs>
+
+        <ellipse cx="210" cy="312" rx="132" ry="20" fill="#c9b48f" opacity=".38"/>
+
+        <path d="M96 178 Q106 300 210 306 Q314 300 324 178 Z" fill="url(#bowl)" stroke="#cdb896" stroke-width="2"/>
+        <ellipse cx="210" cy="178" rx="114" ry="34" fill="#fffdf6" stroke="#cdb896" stroke-width="2"/>
+        <ellipse cx="210" cy="180" rx="98" ry="27" fill="url(#riceg)"/>
+
+        <ellipse cx="196" cy="172" rx="70" ry="20" fill="url(#sauce)" opacity=".92"/>
+        <circle cx="170" cy="166" r="4" fill="#241a12"/>
+        <circle cx="226" cy="170" r="3.4" fill="#241a12"/>
+        <circle cx="205" cy="180" r="3" fill="#241a12"/>
+        <circle cx="185" cy="178" r="2.6" fill="#241a12"/>
+
+        <g>
+          <ellipse cx="150" cy="160" rx="24" ry="17" fill="#fffdf6" stroke="#e3d6bd" stroke-width="1.4"/>
+          <ellipse cx="150" cy="160" rx="15" ry="10.5" fill="url(#yolk)"/>
+          <ellipse cx="146" cy="157" rx="5" ry="3.4" fill="#fff3c9" opacity=".85"/>
+        </g>
+
+        <g>
+          <rect x="236" y="140" width="34" height="40" rx="9" fill="#b0602e" transform="rotate(14 253 160)"/>
+          <rect x="240" y="146" width="26" height="28" rx="7" fill="#d18a4e" transform="rotate(14 253 160)"/>
+          <path d="M244 150 l16 6" stroke="#f3dfae" stroke-width="2.4" stroke-linecap="round" opacity=".8"/>
+        </g>
+
+        <g stroke="#4d6b45" stroke-width="4" stroke-linecap="round" opacity=".9">
+          <path d="M132 196 q10 8 20 3"/>
+          <path d="M262 192 q-9 9 -20 4"/>
+        </g>
+        <circle cx="258" cy="205" r="4" fill="#c0492b"/>
+        <circle cx="140" cy="210" r="3.2" fill="#c0492b"/>
+
+        <g opacity=".55" stroke="#8f6f4a" stroke-width="2" stroke-linecap="round">
+          <path d="M330 96 q10 -18 4 -34"/>
+          <path d="M344 100 q12 -14 8 -30"/>
+          <path d="M356 108 q10 -12 8 -26"/>
+        </g>
+
+        <g transform="translate(58 92)">
+          <circle r="20" fill="#f3dfae" stroke="#d9971f" stroke-width="2"/>
+          <text x="0" y="5" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#8f3218" font-weight="700">饭</text>
+        </g>
+        <g transform="translate(352 236)">
+          <circle r="17" fill="#f8e3e9" stroke="#6b3e52" stroke-width="2"/>
+          <text x="0" y="5" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#6b3e52" font-weight="700">心</text>
+        </g>
+      </svg>
+      <span class="art-caption">酱 · 蛋 · 米 · 火候</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 布局 ============ -->
+<div class="layout">
+
+  <!-- ======== 主内容 ======== -->
+  <main class="main-col">
+
+    <!-- 1 领域概览 -->
+    <section class="block" id="overview" aria-labelledby="h-overview">
+      <div class="block-head">
+        <span class="kicker">Overview</span>
+        <h2 id="h-overview"><span class="idx">01</span>领域概览：这碗饭由哪些具体东西构成</h2>
+        <p class="sub">拆成酱汁、火候、米饭、创作者与平台五个可验证的观察面。</p>
+      </div>
+      <div class="overview-grid">
+        <article class="ov-card">
+          <div class="ov-top"><span class="ov-ico">酱</span><h3>黑椒酱汁的三种基底</h3></div>
+          <p>现磨黑胡椒粒配牛油、蚝油与生抽的复合版，常见比例 1∶2∶2；餐饮装多用黑椒汁冷冻包，钠含量约 620mg/100g。</p>
+          <span class="meta">可核对：2026-10-28 三家连锁配料表</span>
+        </article>
+        <article class="ov-card">
+          <div class="ov-top"><span class="ov-ico">火</span><h3>糖心蛋的 6 分 30 秒线</h3></div>
+          <p>室温蛋沸水煮 6 分 30 秒后冰水 2 分钟，蛋黄中心温度落在 68—72℃，是多数测评称「流而不散」的区间。</p>
+          <span class="meta">可核对：11-03 厨房温度计实测 5 枚</span>
+        </article>
+        <article class="ov-card">
+          <div class="ov-top"><span class="ov-ico">米</span><h3>盖饭用什么米更稳</h3></div>
+          <p>粳米与珍珠米按 7∶3 混，水米比 1.05∶1；纯糯米吸汁后偏黏，冷掉会结块，外卖场景差评率明显更高。</p>
+          <span class="meta">可核对：11-06 三组冷饭回温测试</span>
+        </article>
+        <article class="ov-card">
+          <div class="ov-top"><span class="ov-ico">人</span><h3>楠楠的测评口径</h3></div>
+          <p>楠楠从 2026-10-18 起固定用「酱量勺数／蛋黄流动秒数／米饭回弹」三项打分，满分 15，已测 22 家。</p>
+          <span class="meta">可核对：10-18 起《盖饭三件套》系列</span>
+        </article>
+        <article class="ov-card">
+          <div class="ov-top"><span class="ov-ico">风</span><h3>御姐风吃播的镜头语言</h3></div>
+          <p>俯拍 45°、暖白 3200K、咀嚼声单独轨；11-02 后多账号改用近景特写，单条时长压到 58 秒以内。</p>
+          <span class="meta">可核对：11-02 至 11-07 六条热门切片</span>
+        </article>
+        <article class="ov-card">
+          <div class="ov-top"><span class="ov-ico">台</span><h3>内容散落在哪几个平台</h3></div>
+          <p>菜谱多在图文社区，直播回放集中在短视频平台，争议讨论多见于弹幕与评论区，三处时间戳常对不上。</p>
+          <span class="meta">可核对：11-05 起对 9 条内容做交叉比对</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- 2 精选内容推荐 -->
+    <section class="block" id="picks" aria-labelledby="h-picks">
+      <div class="block-head">
+        <span class="kicker">Picks</span>
+        <h2 id="h-picks"><span class="idx">02</span>精选内容推荐：本周值得先看的四条</h2>
+        <p class="sub">按「能复现」优先排序，标题含具体做法或具体账号。</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-lead">
+          <img src="https://picsum.photos/seed/pepperbowl-lead-11/720/420" width="720" height="420" loading="lazy" alt="黑椒盖饭成品俯拍，糖心蛋切面流出橙黄蛋液，酱汁淋在米饭上">
+          <div class="fl-body">
+            <span class="pill">主编推荐</span>
+            <h3>黑椒盖饭糖心蛋流心配比：6分30秒＋冰水2分钟的复现记录</h3>
+            <p>11月7日更新的三组对照：蛋从冷藏直接下锅、室温回温 20 分钟、沸水后转小火，蛋黄流动状态差异被逐秒记录。</p>
+          </div>
+        </article>
+        <div class="feature-side">
+          <article class="fs-card">
+            <img src="https://picsum.photos/seed/nannan-review-22/180/180" width="180" height="180" loading="lazy" alt="楠楠盖饭测评视频截图，桌面上摆着三碗不同酱色的盖饭">
+            <div class="fs-txt">
+              <h3>楠楠御姐盖饭测评第 22 期</h3>
+              <p>10月26日发布，15 分制里 12.5 分，扣分点是酱偏咸、米饭偏软。</p>
+            </div>
+          </article>
+          <article class="fs-card">
+            <img src="https://picsum.photos/seed/tangxin-lab-33/180/180" width="180" height="180" loading="lazy" alt="厨房台面上的温度计与切开的两枚糖心蛋">
+            <div class="fs-txt">
+              <h3>糖心蛋中心温度实测表</h3>
+              <p>11月3日，5 枚蛋、3 个时间点，中心温度 68—72℃ 区间截图公开。</p>
+            </div>
+          </article>
+          <article class="fs-card">
+            <img src="https://picsum.photos/seed/yujie-live-44/180/180" width="180" height="180" loading="lazy" alt="直播画面中主播手持勺子舀起黑椒酱汁">
+            <div class="fs-txt">
+              <h3>御姐风吃播镜头清单</h3>
+              <p>11月2日直播回放拆解，俯拍角度与咀嚼声轨道的具体设置。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 最新更新 -->
+    <section class="block" id="updates" aria-labelledby="h-updates">
+      <div class="block-head">
+        <span class="kicker">Updates</span>
+        <h2 id="h-updates"><span class="idx">03</span>最新更新：10月10日到11月8日的可核对条目</h2>
+        <p class="sub">每条标出平台与账号，日期精确到日。</p>
+      </div>
+      <ul class="update-list">
+        <li>
+          <span class="date">11-07</span>
+          <div class="u-txt"><strong>糖心蛋流心配比实测更新</strong>：新增冷藏直下与室温回温两组，蛋黄流动秒数分别为 3.2 秒与 5.6 秒。<span class="src">来源：图文社区 @楠楠厨房记录</span></div>
+        </li>
+        <li>
+          <span class="date">11-06</span>
+          <div class="u-txt"><strong>米饭回温测试</strong>：冷饭微波 60 秒后回弹评分从 6 分回升到 9 分（满分 15），珍珠米占比高的那碗回升最明显。<span class="src">来源：短视频 @盖饭实验室</span></div>
+        </li>
+        <li>
+          <span class="date">11-05</span>
+          <div class="u-txt"><strong>楠楠直播回放归档</strong>：时长 2 小时 14 分，涉及 6 家外卖盖饭的盲测，弹幕争议集中在第 47 分钟。<span class="src">来源：直播平台 @楠楠御姐</span></div>
+        </li>
+        <li>
+          <span class="date">11-03</span>
+          <div class="u-txt"><strong>中心温度截图公开</strong>：5 枚蛋，6 分 30 秒组平均 70.4℃，6 分钟组平均 66.1℃。<span class="src">来源：图文社区 @糖心研究所</span></div>
+        </li>
+        <li>
+          <span class="date">11-02</span>
+          <div class="u-txt"><strong>镜头语言改用近景</strong>：三条热门切片时长从 1 分 42 秒压到 56 秒，评论区提到「看不清酱色」的条数上升。<span class="src">来源：短视频平台公开数据</span></div>
+        </li>
+        <li>
+          <span class="date">10-28</span>
+          <div class="u-txt"><strong>三家连锁配料表比对</strong>：黑椒汁钠含量分别 580、620、710mg/100g，第三家未标黑胡椒粒含量。<span class="src">来源：门店公示包装背面</span></div>
+        </li>
+        <li>
+          <span class="date">10-26</span>
+          <div class="u-txt"><strong>楠楠测评第 22 期上线</strong>：15 分制得 12.5 分，这是该系列首次出现「酱过咸」扣分。<span class="src">来源：短视频 @楠楠御姐</span></div>
+        </li>
+        <li>
+          <span class="date">10-18</span>
+          <div class="u-txt"><strong>《盖饭三件套》评分口径固定</strong>：酱量勺数、蛋黄流动秒数、米饭回弹三项各 5 分，此后所有测评沿用。<span class="src">来源：图文社区 @楠楠厨房记录</span></div>
+        </li>
+        <li>
+          <span class="date">10-14</span>
+          <div class="u-txt"><strong>冷冻黑椒汁复热实验</strong>：解冻后静置 30 分钟再加热，酱体挂勺度优于直接微波，结块率从 3/5 降到 1/5。<span class="src">来源：短视频 @盖饭实验室</span></div>
+        </li>
+        <li>
+          <span class="date">10-10</span>
+          <div class="u-txt"><strong>「御姐糖心」标签首次进入站内热搜</strong>：当日关联内容 41 条，其中 28 条为吃播切片。<span class="src">来源：站内统计</span></div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 4 分类入口 -->
+    <section class="block" id="categories" aria-labelledby="h-categories">
+      <div class="block-head">
+        <span class="kicker">Categories</span>
+        <h2 id="h-categories"><span class="idx">04</span>分类入口：按你实际要找的东西进</h2>
+        <p class="sub">括号内为已收录条目数，统计到 11 月 8 日。</p>
+      </div>
+      <div class="cat-tags">
+        <a class="cat-tag" href="/#deepdive">黑椒酱汁配比 <span class="n">18</span></a>
+        <a class="cat-tag" href="/#guide">糖心蛋煮法 <span class="n">24</span></a>
+        <a class="cat-tag" href="/#picks">楠楠盖饭测评 <span class="n">22</span></a>
+        <a class="cat-tag" href="/#updates">御姐风吃播切片 <span class="n">31</span></a>
+        <a class="cat-tag" href="/#news">外卖盖饭对比 <span class="n">16</span></a>
+        <a class="cat-tag" href="/#rank">盖饭榜单 <span class="n">9</span></a>
+        <a class="cat-tag" href="/#comments">用户实测反馈 <span class="n">47</span></a>
+        <a class="cat-tag" href="/#faq">米饭选米与回温 <span class="n">12</span></a>
+        <a class="cat-tag" href="/#timeline">争议与回应记录 <span class="n">7</span></a>
+        <a class="cat-tag" href="/#reco">相关推荐标签 <span class="n">35</span></a>
+        <a class="cat-tag" href="/#picks">冷冻酱包复热 <span class="n">8</span></a>
+        <a class="cat-tag" href="/#guide">家庭版复现清单 <span class="n">14</span></a>
+      </div>
+    </section>
+
+    <!-- 5 深度解析 -->
+    <section class="block" id="deepdive" aria-labelledby="h-deepdive">
+      <div class="block-head">
+        <span class="kicker">Deep Dive</span>
+        <h2 id="h-deepdive"><span class="idx">05</span>深度解析：糖心蛋的「6分30秒」被高估了</h2>
+        <p class="sub">全页唯一主体阅读区，含可核对的中段与可被反驳的判断。</p>
+      </div>
+      <div class="essay">
+        <p class="lead">先给判断：在家庭燃气灶、室温 22℃、蛋从冷藏取出不回温的条件下，沸水煮 6 分 30 秒并不稳定产出「流而不散」的糖心，失败样本集中在蛋黄外圈过熟、内芯仍凉的两极。这条判断可以被反驳，只要有人在同一条件下拿出 10 枚以上全部达标的记录。</p>
+
+        <div class="judge-box">
+          <span class="jt">可核对判断 · 拆成三项</span>
+          <p>①蛋黄中心温度：11月3日 5 枚实测，6 分 30 秒组 70.4℃，6 分钟组 66.1℃，两组差 4.3℃；②冰水降温时长：2 分钟与 4 分钟对切面流动影响不大，但对剥壳完整率影响明显；③蛋的初始温度：冷藏直下与室温回温 20 分钟，流动秒数差 2.4 秒。三项里只有第①项与「6分30秒」强相关。</p>
+        </div>
+
+        <h3>案例时间线：从 10 月 18 日到 11 月 7 日，口径怎么变的</h3>
+        <p>10 月 18 日，楠楠在《盖饭三件套》里把「蛋黄流动秒数」定为评分项，当时用的是室温蛋，没写回温时长。10 月 26 日第 22 期测评，扣分理由写「酱过咸」，蛋黄项给了 4 分，评论区第一次有人追问蛋是不是冷藏直下。11 月 3 日糖心研究所公开 5 枚蛋的中心温度截图，把「6 分 30 秒」和 70.4℃ 绑定。11 月 7 日配比实测补了冷藏直下组，流动秒数掉到 3.2 秒，等于承认前一轮口径漏了初始温度这一项。</p>
+        <p>这四步里，能核对的只有日期、账号、数字；「为什么改口径」属于推测，公开内容没有说明动机，只能看到前后数据对不上。</p>
+
+        <h3>数据对比：三组条件，两个结果</h3>
+        <table class="check-table">
+          <caption style="caption-side:top;text-align:left;font-size:12.5px;color:var(--muted);padding-bottom:6px">糖心蛋条件对照（2026-11-07 更新）</caption>
+          <thead>
+            <tr><th>条件</th><th>煮制时长</th><th>蛋黄状态</th><th>流动秒数</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>冷藏直下</td><td>6 分 30 秒</td><td>外圈偏熟，内芯凉</td><td>3.2 秒</td></tr>
+            <tr><td>室温回温 20 分钟</td><td>6 分 30 秒</td><td>流而不散</td><td>5.6 秒</td></tr>
+            <tr><td>室温回温 20 分钟</td><td>6 分 00 秒</td><td>偏生，蛋白略颤</td><td>7.1 秒</td></tr>
+          </tbody>
+        </table>
+        <p>表格里第三行最容易被忽略：煮短 30 秒，流动秒数反而更长，但蛋白凝固不足，盖在饭上会渗水。也就是说「流动秒数」单独当指标会误导，必须和蛋白状态一起看。</p>
+
+        <h3>说法差异：评论区与测评口径的两套标准</h3>
+        <p>11 月 5 日直播回放第 47 分钟，楠楠说「糖心要看能不能挂住饭」，这是以米饭为参照的标准；同一场直播后段，弹幕里反复出现的是「蛋黄能不能流到碗底」，这是以容器为参照。两套标准对同一枚蛋会给出不同结论。测评表格里没有写参照物，导致第 22 期的 4 分被部分观众认为偏低。</p>
+
+        <div class="quote-card">
+          「第 22 期那碗蛋切开是流的，但没挂住饭，我按挂饭标准扣了 1 分。」
+          <span class="attr">—— 楠楠御姐，11 月 5 日直播回放第 49 分 12 秒，原话转述</span>
+        </div>
+
+        <h3>规则前后变化：评分表多了一栏</h3>
+        <p>对比 10 月 18 日与 11 月 7 日的评分表截图，后者在「蛋黄流动秒数」右侧新增「蛋白凝固」一栏，分值仍为 5 分未拆。这意味着总分不变、观察项变多，单枚蛋的可得分空间被压缩。对读者的实际影响是：11 月 7 日之后的新测评，分数不能直接和 10 月的 22 期横向比较。</p>
+        <p>把判断落到可执行层面：家里做，先回温 20 分钟，沸水 6 分 30 秒，冰水 3 分钟，切开先看蛋白，再看蛋黄。这条流程在 11 月 3 日的 5 枚样本里 5 枚达标，样本量小，欢迎用你自己的记录来反驳。</p>
+      </div>
+    </section>
+
+    <!-- 6 体验指南 -->
+    <section class="block" id="guide" aria-labelledby="h-guide">
+      <div class="block-head">
+        <span class="kicker">Guide</span>
+        <h2 id="h-guide"><span class="idx">06</span>体验指南：在家复现一份合格黑椒盖饭</h2>
+        <p class="sub">五步，每步给出可判断的节点，不写「适量」。</p>
+      </div>
+      <ol class="steps">
+        <li>
+          <h3>选米与煮饭：粳米 7、珍珠米 3</h3>
+          <p>水米比 1.05∶1，电饭煲标准档。煮好焖 10 分钟再开盖，米饭中心温度保持在 62℃ 以上再盖酱。<span class="note">判断点：米粒能分开、不粘勺背。</span></p>
+        </li>
+        <li>
+          <h3>调黑椒酱：现磨胡椒 1、蚝油 2、生抽 2</h3>
+          <p>加 30ml 清水与 5g 黄油小火收 2 分钟，酱体挂勺即可。用现成黑椒汁的话，先尝咸度再决定是否加水。<span class="note">判断点：勺背划一道，痕迹 2 秒内不合并。</span></p>
+        </li>
+        <li>
+          <h3>煮糖心蛋：回温 20 分钟，沸水 6 分 30 秒</h3>
+          <p>冰水 3 分钟，剥壳从钝端敲。冷藏直下的话，把时间加到 7 分钟，否则内芯偏凉。<span class="note">判断点：切开蛋白全白、蛋黄外圈不呈粉状。</span></p>
+        </li>
+        <li>
+          <h3>组装顺序：饭—酱—蛋—再淋酱</h3>
+          <p>先淋一半酱让米饭吸味，放蛋后再淋剩余，避免蛋被酱压住看不出切面。碗口留 1cm，防止端起来溢。<span class="note">判断点：端起碗，酱不沿碗壁下滑。</span></p>
+        </li>
+        <li>
+          <h3>复热与外带：分装酱与饭</h3>
+          <p>外带时酱单独装，到家再淋。冷饭微波 60 秒，加盖留缝，回弹明显好于直接高火 90 秒。<span class="note">判断点：复热后米饭不结硬边。</span></p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 7 FAQ -->
+    <section class="block faq" id="faq" aria-labelledby="h-faq">
+      <div class="block-head">
+        <span class="kicker">FAQ</span>
+        <h2 id="h-faq"><span class="idx">07</span>常见问题：糖心蛋、黑椒酱与米饭的十个具体问法</h2>
+        <p class="sub">答案主语是食材与做法，不绕到站点本身。</p>
+      </div>
+      <details open>
+        <summary>黑椒盖饭的糖心蛋煮几分钟才能流心不散？</summary>
+        <div class="ans"><p>室温回温 20 分钟后，沸水 6 分 30 秒、冰水 3 分钟，蛋黄流动约 5.6 秒，蛋白全白。冷藏直下同样时间会外熟内凉，需要加到 7 分钟。</p></div>
+      </details>
+      <details>
+        <summary>黑椒酱汁里黑胡椒粒和蚝油的比例多少合适？</summary>
+        <div class="ans"><p>家庭版常用现磨黑胡椒 1、蚝油 2、生抽 2，再补 30ml 水和 5g 黄油。胡椒超过 1.5 份会明显发苦，尤其是小火收汁时间超过 4 分钟的时候。</p></div>
+      </details>
+      <details>
+        <summary>盖饭用粳米还是珍珠米？</summary>
+        <div class="ans"><p>粳米 7 比珍珠米 3 更稳。纯粳米吸酱后偏软，纯珍珠米冷掉回生快。混米的水米比按 1.05∶1 计，比纯粳米略少一点水。</p></div>
+      </details>
+      <details>
+        <summary>冷冻黑椒汁怎么复热不结块？</summary>
+        <div class="ans"><p>冷藏解冻后静置 30 分钟再小火加热，边加热边搅。直接微波高火 2 分钟结块率约 3/5，按前者做可降到 1/5，数据来自 10 月 14 日的复热实验。</p></div>
+      </details>
+      <details>
+        <summary>楠楠御姐盖饭测评的 15 分制怎么算？</summary>
+        <div class="ans"><p>酱量勺数、蛋黄流动秒数、米饭回弹各 5 分。11 月 7 日起新增「蛋白凝固」观察项但不加分值，所以新测评的分数不能直接和 10 月的第 22 期横比。</p></div>
+      </details>
+      <details>
+        <summary>糖心蛋切开流到碗底算好还是算差？</summary>
+        <div class="ans"><p>看参照物。以米饭为参照，「挂住饭」算好；以容器为参照，「流到碗底」算好。两套标准对同一枚蛋结论可能相反，测评表格若不写参照物就容易产生分歧。</p></div>
+      </details>
+      <details>
+        <summary>御姐风吃播为什么最近都改近景了？</summary>
+        <div class="ans"><p>11 月 2 日之后多条切片把时长压到 58 秒以内，镜头推近便于在短时长里展示酱色与切面。代价是评论区提到「看不清整碗分量」的条数上升。</p></div>
+      </details>
+      <details>
+        <summary>外卖盖饭到家米饭变硬怎么补救？</summary>
+        <div class="ans"><p>加盖留缝微波 60 秒，比高火 90 秒回弹更好。11 月 6 日测试里，前者回弹分从 6 升到 9，后者只到 7.5，且边缘更干。</p></div>
+      </details>
+      <details>
+        <summary>黑椒酱偏咸还能救吗？</summary>
+        <div class="ans"><p>加 20ml 清水与 3g 糖小火回煮 1 分钟，或直接加半份未调味的米饭量。钠含量 710mg/100g 的那款连锁酱，建议先减三分之一用量再补。</p></div>
+      </details>
+      <details>
+        <summary>糖心蛋剥壳总破是什么原因？</summary>
+        <div class="ans"><p>冰水时间不足是主因，2 分钟与 4 分钟的剥壳完整率差距明显；其次是蛋太新鲜，气室小。钝端敲裂后从裂口进水再剥，成功率更高。</p></div>
+      </details>
+    </section>
+
+    <!-- 8 用户评论 -->
+    <section class="block" id="comments" aria-labelledby="h-comments">
+      <div class="block-head">
+        <span class="kicker">Voices</span>
+        <h2 id="h-comments"><span class="idx">08</span>用户评论：复现之后的具体反馈</h2>
+        <p class="sub">保留吐槽，至少三分之一指向具体条目。</p>
+      </div>
+      <div class="comments">
+        <article class="cmt">
+          <div class="who"><span class="ava">阿</span><b>阿棠</b><span class="t">11-07 21:14</span></div>
+          <p>按 6 分 30 秒做，第一枚切开蛋黄流得刚好，第二枚直接从冰箱拿出来下锅，中间是凉的。回温这一步真不能省。</p>
+          <span class="ref">指向：糖心蛋 6分30秒流程</span>
+        </article>
+        <article class="cmt dim">
+          <div class="who"><span class="ava">老</span><b>老周不吃酱</b><span class="t">11-07 19:02</span></div>
+          <p>黑椒 1、蚝油 2、生抽 2 这个比例对我来说咸了，减到生抽 1.5 才顺口。可能我口味淡，但配方没写可调范围。</p>
+          <span class="ref">指向：黑椒酱汁配比</span>
+        </article>
+        <article class="cmt">
+          <div class="who"><span class="ava">小</span><b>小满</b><span class="t">11-06 12:38</span></div>
+          <p>微波 60 秒那招试了，米饭确实没那么硬。不过外卖盒底部已经压实的部分还是救不回来。</p>
+          <span class="ref">指向：11-06 米饭回温测试</span>
+        </article>
+        <article class="cmt">
+          <div class="who"><span class="ava">Y</span><b>Yuki_盖饭</b><span class="t">11-05 23:51</span></div>
+          <p>第 22 期那家我去吃了，酱咸是真的，米饭其实还行。给 12.5 分我觉得合理，但「蛋 4 分」有点冤。</p>
+          <span class="ref">指向：楠楠测评第 22 期</span>
+        </article>
+        <article class="cmt dim">
+          <div class="who"><span class="ava">三</span><b>三号窗口</b><span class="t">11-05 22:07</span></div>
+          <p>直播第 47 分钟那段吵得没必要，两边说的根本不是同一件事，一个看挂饭一个看流碗底。</p>
+          <span class="ref">指向：11-05 直播回放争议</span>
+        </article>
+        <article class="cmt">
+          <div class="who"><span class="ava">啊</span><b>啊呜一口</b><span class="t">11-04 20:15</span></div>
+          <p>近景是好看，但我想知道整碗多大，最近几条切片全在拍酱，分量完全看不出来。</p>
+          <span class="ref">指向：11-02 镜头改近景</span>
+        </article>
+        <article class="cmt">
+          <div class="who"><span class="ava">陈</span><b>陈小满</b><span class="t">11-03 09:44</span></div>
+          <p>温度计那组数据我信，因为我自己测 6 分钟那组也是 66℃ 上下，误差一秒都不到。</p>
+          <span class="ref">指向：11-03 中心温度实测</span>
+        </article>
+        <article class="cmt dim">
+          <div class="who"><span class="ava">灶</span><b>灶台边的人</b><span class="t">11-02 18:30</span></div>
+          <p>冷冻酱包静置 30 分钟再加热这说法，我试了两次还是结块，可能是我的锅太薄。</p>
+          <span class="ref">指向：10-14 复热实验</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- 9 相关资讯 -->
+    <section class="block" id="news" aria-labelledby="h-news">
+      <div class="block-head">
+        <span class="kicker">News</span>
+        <h2 id="h-news"><span class="idx">09</span>相关资讯：外卖与连锁门店的横向对比</h2>
+        <p class="sub">同一事件不在其他板块重复，这里只看门店与包装。</p>
+      </div>
+      <ul class="news-list">
+        <li><span class="nb">门店</span><span class="nt"><strong>三家连锁黑椒盖饭酱量对比</strong>：15 元档平均 48g，22 元档平均 62g，价差没同步反映在酱量上。</span><span class="nd">11-06</span></li>
+        <li><span class="nb">包装</span><span class="nt"><strong>分装酱盒渗漏率</strong>：抽查 20 单，3 单出现酱汁沿盒盖渗到饭盒外层，均为卡扣式包装。</span><span class="nd">11-05</span></li>
+        <li><span class="nb">配料</span><span class="nt"><strong>黑胡椒粒含量标注缺失</strong>：三家门店包装上，只有两家写了胡椒粒占比，另一家仅标「黑椒汁」。</span><span class="nd">10-28</span></li>
+        <li><span class="nb">外卖</span><span class="nt"><strong>到家米饭温度</strong>：抽样 12 单，平均到手温度 48℃，低于 50℃ 的 5 单普遍反馈米饭偏硬。</span><span class="nd">10-24</span></li>
+        <li><span class="nb">价格</span><span class="nt"><strong>糖心蛋加价区间</strong>：单加 3—5 元，6 家门店中 4 家默认不配蛋，需单独下单。</span><span class="nd">10-19</span></li>
+        <li><span class="nb">平台</span><span class="nt"><strong>图文与短视频菜谱差异</strong>：同款盖饭，图文版给的是水米比，短视频版只写「适量」，复现难度差一档。</span><span class="nd">10-16</span></li>
+      </ul>
+    </section>
+
+    <!-- 10 相关推荐 -->
+    <section class="block" id="reco" aria-labelledby="h-reco">
+      <div class="block-head">
+        <span class="kicker">Tags</span>
+        <h2 id="h-reco"><span class="idx">10</span>相关推荐：直接能点进去搜的长尾词</h2>
+        <p class="sub">标签即检索词，站内与站外都能用。</p>
+      </div>
+      <div class="reco-tags">
+        <a class="reco-tag" href="/#guide">黑椒盖饭糖心蛋流心煮法</a>
+        <a class="reco-tag" href="/#deepdive">现磨黑胡椒与黑椒汁区别</a>
+        <a class="reco-tag" href="/#picks">楠楠御姐盖饭测评合集</a>
+        <a class="reco-tag" href="/#guide">糖心蛋中心温度 70 度</a>
+        <a class="reco-tag" href="/#faq">黑椒酱太咸怎么补救</a>
+        <a class="reco-tag" href="/#faq">粳米珍珠米混煮比例</a>
+        <a class="reco-tag" href="/#updates">御姐风吃播近景拍摄</a>
+        <a class="reco-tag" href="/#news">外卖盖饭米饭回温技巧</a>
+        <a class="reco-tag" href="/#comments">冷冻黑椒汁复热结块</a>
+        <a class="reco-tag" href="/#timeline">糖心蛋评分口径变化</a>
+        <a class="reco-tag" href="/#rank">22 元档黑椒盖饭性价比</a>
+        <a class="reco-tag" href="/#guide">盖饭组装淋酱顺序</a>
+      </div>
+    </section>
+
+    <!-- 11 榜单 -->
+    <section class="block" id="rank" aria-labelledby="h-rank">
+      <div class="block-head">
+        <span class="kicker">Rank</span>
+        <h2 id="h-rank"><span class="idx">11</span>榜单：按三项评分排的盖饭条目</h2>
+        <p class="sub">满分 15，数据来自 10 月 18 日至 11 月 7 日的公开测评，样本 22 条。</p>
+      </div>
+      <ol class="rank-list">
+        <li>
+          <span class="rk">1</span>
+          <div class="rt"><b>黑椒牛柳糖心蛋盖饭</b><span>楠楠测评 11-01 · 酱量 3 勺 · 蛋流动 5.4 秒</span></div>
+          <div class="bar"><i style="width:92%"></i></div>
+        </li>
+        <li>
+          <span class="rk">2</span>
+          <div class="rt"><b>现磨胡椒双拼盖饭</b><span>盖饭实验室 10-29 · 酱量 2.5 勺 · 蛋流动 5.1 秒</span></div>
+          <div class="bar"><i style="width:86%"></i></div>
+        </li>
+        <li>
+          <span class="rk">3</span>
+          <div class="rt"><b>黄油黑椒鸡腿盖饭</b><span>楠楠测评 10-26 · 酱偏咸 · 米饭回弹 9 分</span></div>
+          <div class="bar"><i style="width:83%"></i></div>
+        </li>
+        <li>
+          <span class="rk">4</span>
+          <div class="rt"><b>珍珠米特调盖饭</b><span>糖心研究所 10-22 · 混米 7∶3 · 冷饭回生慢</span></div>
+          <div class="bar"><i style="width:78%"></i></div>
+        </li>
+        <li>
+          <span class="rk">5</span>
+          <div class="rt"><b>冷冻酱包复热款</b><span>盖饭实验室 10-14 · 挂勺度好 · 结块率 1/5</span></div>
+          <div class="bar"><i style="width:71%"></i></div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 时间线（补充板块） -->
+    <section class="block" id="timeline" aria-labelledby="h-tl">
+      <div class="block-head">
+        <span class="kicker">Timeline</span>
+        <h2 id="h-tl"><span class="idx">12</span>时间线：争议与回应按发生顺序排</h2>
+        <p class="sub">事实、回应、转述、推测分开标注。</p>
+      </div>
+      <ul class="timeline">
+        <li><span class="tm">10-18 · 事实</span><span class="tx">《盖饭三件套》评分口径发布，蛋黄项以流动秒数计，未写蛋的初始温度。</span></li>
+        <li><span class="tm">10-26 · 事实</span><span class="tx">第 22 期给出 12.5 分，蛋黄项 4 分，评论区出现「蛋是冷藏直下吗」的追问。</span></li>
+        <li><span class="tm">11-02 · 事实</span><span class="tx">多条吃播切片改为近景，时长压到 58 秒以内，同期「看不清分量」的反馈出现。</span></li>
+        <li><span class="tm">11-03 · 事实</span><span class="tx">糖心研究所公开 5 枚蛋中心温度截图，6 分 30 秒组均值 70.4℃。</span></li>
+        <li><span class="tm">11-05 · 回应</span><span class="tx">直播中楠楠解释扣分依据是「蛋没挂住饭」，把参照物明确为米饭。</span></li>
+        <li><span class="tm">11-05 · 转述</span><span class="tx">弹幕整理帖称「测评双标」，属转述，未提供原始截图。</span></li>
+        <li><span class="tm">11-07 · 事实</span><span class="tx">配比实测补充冷藏直下组，流动秒数 3.2 秒，评分表新增「蛋白凝固」观察项。</span></li>
+        <li><span class="tm">11-08 · 推测</span><span class="tx">新增观察项可能为下一轮口径调整铺路，属推测，公开内容尚未说明。</span></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- ======== 侧栏 ======== -->
+  <aside class="side-col" aria-label="侧栏导航与速览">
+    <nav class="side-card" aria-label="栏内跳转">
+      <h2>栏内跳转</h2>
+      <ul class="side-nav" id="sideNav">
+        <li><a href="/#overview">01 领域概览</a></li>
+        <li><a href="/#picks">02 精选内容推荐</a></li>
+        <li><a href="/#updates">03 最新更新</a></li>
+        <li><a href="/#categories">04 分类入口</a></li>
+        <li><a href="/#deepdive">05 深度解析</a></li>
+        <li><a href="/#guide">06 体验指南</a></li>
+        <li><a href="/#faq">07 常见问题</a></li>
+        <li><a href="/#comments">08 用户评论</a></li>
+        <li><a href="/#news">09 相关资讯</a></li>
+        <li><a href="/#reco">10 相关推荐</a></li>
+        <li><a href="/#rank">11 榜单</a></li>
+        <li><a href="/#timeline">12 时间线</a></li>
+      </ul>
+    </nav>
+
+    <div class="side-card">
+      <h2>本周被搜最多的词</h2>
+      <ol class="side-hot">
+        <li><span class="h-n">1</span><a href="/#guide">糖心蛋 6 分 30 秒</a></li>
+        <li><span class="h-n">2</span><a href="/#deepdive">黑椒酱汁 1∶2∶2</a></li>
+        <li><span class="h-n">3</span><a href="/#picks">楠楠测评第 22 期</a></li>
+        <li><span class="h-n">4</span><a href="/#news">外卖米饭回温</a></li>
+        <li><span class="h-n">5</span><a href="/#timeline">蛋黄挂饭标准</a></li>
+      </ol>
+    </div>
+
+    <div class="side-card">
+      <h2>阅读提示</h2>
+      <p class="side-note"><b>数据口径：</b>测评分数为 15 分制，11 月 7 日起新增观察项但不加分，跨月比较需注意。<br><b>样本量：</b>糖心蛋温度测试 5 枚，米饭回温测试 3 组，样本都不大。</p>
+    </div>
+
+    <div class="side-card side-cta">
+      <h2>有复现记录？</h2>
+      <p>把你家的蛋、米、酱拍下来，写清时间与克数，下期更新会挑三条公开比对。</p>
+      <a class="btn" href="/#comments">去评论区看看别人怎么做 →</a>
+    </div>
+  </aside>
+
+</div>
+
+<!-- ============ 页尾 ============ -->
+<footer class="site-footer" id="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <svg width="34" height="34" viewBox="0 0 64 64" role="img" aria-label="页尾品牌图形">
+            <rect width="64" height="64" rx="16" fill="#3a2410"/>
+            <ellipse cx="32" cy="42" rx="19" ry="11" fill="#f5e6c8"/>
+            <ellipse cx="32" cy="39" rx="15" ry="8" fill="#fffdf5"/>
+            <ellipse cx="32" cy="32" rx="8.5" ry="5.6" fill="#e8a33d"/>
+            <circle cx="27" cy="37" r="2" fill="#c0492b"/>
+            <circle cx="36" cy="40" r="1.7" fill="#8f3218"/>
+          </svg>
+          <span>
+            <span class="cn">黑椒盖饭楠楠御姐糖心</span>
+            <span class="en">Pepper Bowl · Index</span>
+          </span>
+        </div>
+        <p class="footer-pos">把酱汁配比、蛋黄温度与外卖包装的实测数据留在同一页，方便下厨时对照、吃完后复核。</p>
+      </div>
+      <div class="footer-groups">
+        <div>
+          <h3>做法</h3>
+          <ul>
+            <li><a href="/#guide">糖心蛋煮法</a></li>
+            <li><a href="/#guide">黑椒酱汁配比</a></li>
+            <li><a href="/#faq">冷冻酱包复热</a></li>
+            <li><a href="/#guide">米饭混煮比例</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>观察</h3>
+          <ul>
+            <li><a href="/#deepdive">深度解析</a></li>
+            <li><a href="/#rank">盖饭榜单</a></li>
+            <li><a href="/#timeline">争议与回应</a></li>
+            <li><a href="/#updates">最新更新</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>互动</h3>
+          <ul>
+            <li><a href="/#comments">用户评论</a></li>
+            <li><a href="/#reco">相关推荐标签</a></li>
+            <li><a href="/#categories">分类入口</a></li>
+            <li><a href="/#faq">常见问题</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <span><b>示例数据说明：</b>本页测评分数、温度、克数与门店价格均为示例条目，用于演示内容结构，不作为消费依据。</span>
+      <span><b>内容更新时间：</b>2026-11-08 09:30，对应「最新更新」板块 10 条记录与「时间线」8 条记录。</span>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 黑椒盖饭楠楠御姐糖心 · 内容整理与示例展示</span>
+      <span>站内检索为本地匹配，不发送请求</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- 移动端菜单 ---------- */
+  var menuBtn = document.getElementById('menuBtn');
+  var mainNav = document.getElementById('mainNav');
+  if(menuBtn && mainNav){
+    menuBtn.addEventListener('click', function(){
+      var open = mainNav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    mainNav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        mainNav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  /* ---------- 本地搜索 ---------- */
+  var form = document.getElementById('searchForm');
+  var input = document.getElementById('searchInput');
+  var feedback = document.getElementById('searchFeedback');
+  var searchables = Array.prototype.slice.call(
+    document.querySelectorAll('main .block h2, main .block h3, main .block p, main .block li, main .block summary, main .block .reco-tag, main .block .cat-tag')
+  );
+
+  function clearMarks(){
+    Array.prototype.forEach.call(document.querySelectorAll('mark[data-search]'), function(m){
+      var parent = m.parentNode;
+      parent.replaceChild(document.createTextNode(m.textContent), m);
+      parent.normalize();
+    });
+  }
+
+  function runSearch(q){
+    clearMarks();
+    if(!q){
+      feedback.className = 'search-feedback';
+      feedback.textContent = '';
+      return;
+    }
+    var hits = 0, first = null;
+    searchables.forEach(function(el){
+      if(el.closest('.side-col')) return;
+      if(el.textContent.indexOf(q) !== -1){
+        hits++;
+        if(!first) first = el;
+      }
+    });
+    if(hits === 0){
+      feedback.className = 'search-feedback show';
+      feedback.textContent = '没有匹配「' + q + '」，换个词试试，比如「糖心蛋」或「黑椒酱」。';
+      return;
+    }
+    feedback.className = 'search-feedback show';
+    feedback.textContent = '找到 ' + hits + ' 处，已跳到第一处。';
+    if(first){
+      var target = first.closest('section.block') || first;
+      var y = target.getBoundingClientRect().top + window.pageYOffset - 158;
+      window.scrollTo({top: y, behavior: 'smooth'});
+    }
+  }
+
+  if(form && input){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      runSearch(input.value.trim());
+    });
+    input.addEventListener('input', function(){
+      if(input.value.trim() === ''){
+        clearMarks();
+        feedback.className = 'search-feedback';
+        feedback.textContent = '';
+      }
+    });
+  }
+
+  /* ---------- 侧栏滚动高亮 ---------- */
+  var sideLinks = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var sections = sideLinks.map(function(a){
+    var id = a.getAttribute('href').replace('/#','');
+    return {link: a, el: document.getElementById(id)};
+  }).filter(function(s){ return s.el; });
+
+  function highlight(){
+    var pos = window.pageYOffset + 190;
+    var active = null;
+    sections.forEach(function(s){
+      if(s.el.offsetTop <= pos) active = s;
+    });
+    sideLinks.forEach(function(a){ a.classList.remove('active'); });
+    if(active) active.link.classList.add('active');
+  }
+
+  /* ---------- 回到顶部 ---------- */
+  var toTop = document.getElementById('toTop');
+  function toggleTop(){
+    if(window.pageYOffset > 480){
+      toTop.classList.add('show');
+    } else {
+      toTop.classList.remove('show');
+    }
+  }
+  if(toTop){
+    toTop.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  }
+
+  var ticking = false;
+  function onScroll(){
+    if(!ticking){
+      window.requestAnimationFrame(function(){
+        highlight();
+        toggleTop();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll);
+  highlight();
+  toggleTop();
+
+  /* ---------- 站内锚点平滑滚动（预留吸顶偏移） ---------- */
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a');
+    if(!a) return;
+    var href = a.getAttribute('href') || '';
+    if(href.indexOf('/#') === 0){
+      e.preventDefault();
+      var id = href.slice(2);
+      var el = document.getElementById(id);
+      if(!el) return;
+      var y = el.getBoundingClientRect().top + window.pageYOffset - 152;
+      window.scrollTo({top: y, behavior: 'smooth'});
+      if(history.replaceState){ history.replaceState(null, '', '#' + id); }
+      if(mainNav && mainNav.classList.contains('open')){
+        mainNav.classList.remove('open');
+        if(menuBtn) menuBtn.setAttribute('aria-expanded','false');
+      }
+    }
+  });
+
+  /* ---------- 结构化数据 ---------- */
+  var siteLD = {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"黑椒盖饭楠楠御姐糖心",
+    "description":"内容导航与深度观察站，整理黑椒盖饭、糖心蛋、楠楠御姐测评与御姐风吃播的实测与讨论。",
+    "inLanguage":"zh-CN"
+  };
+  var faqLD = {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"黑椒盖饭的糖心蛋煮几分钟才能流心不散？","acceptedAnswer":{"@type":"Answer","text":"室温回温20分钟后，沸水6分30秒、冰水3分钟，蛋黄流动约5.6秒，蛋白全白。冷藏直下同样时间会外熟内凉，需加到7分钟。"}},
+      {"@type":"Question","name":"黑椒酱汁里黑胡椒粒和蚝油的比例多少合适？","acceptedAnswer":{"@type":"Answer","text":"家庭版常用现磨黑胡椒1、蚝油2、生抽2，再补30ml水和5g黄油。胡椒超过1.5份会明显发苦。"}},
+      {"@type":"Question","name":"盖饭用粳米还是珍珠米？","acceptedAnswer":{"@type":"Answer","text":"粳米7比珍珠米3更稳，水米比1.05∶1。纯粳米吸酱后偏软，纯珍珠米冷掉回生快。"}},
+      {"@type":"Question","name":"冷冻黑椒汁怎么复热不结块？","acceptedAnswer":{"@type":"Answer","text":"冷藏解冻后静置30分钟再小火加热并搅拌，结块率可从3/5降到1/5。"}},
+      {"@type":"Question","name":"楠楠御姐盖饭测评的15分制怎么算？","acceptedAnswer":{"@type":"Answer","text":"酱量勺数、蛋黄流动秒数、米饭回弹各5分。11月7日起新增蛋白凝固观察项但不加分值。"}}
+    ]
+  };
+  function injectLD(data){
+    var s = document.createElement('script');
+    s.type = 'application/ld+json';
+    s.textContent = JSON.stringify(data);
+    document.head.appendChild(s);
+  }
+  injectLD(siteLD);
+  injectLD(faqLD);
+})();
+</script>
+</body>
+  </html>
